@@ -1,5 +1,5 @@
-import PageHeader from "../../components/PageHeader/PageHeader";
-import PageSidebar from "../../components/PageSidebar/PageSidebar";
+import PageHeader from "src/components/PageHeader/PageHeader";
+import PageSidebar from "src/components/PageSidebar/PageSidebar";
 
 type Props = {
   children: any;
