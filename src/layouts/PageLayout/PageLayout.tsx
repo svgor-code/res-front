@@ -1,8 +1,9 @@
+import { ReactElement } from "react";
 import PageHeader from "src/components/PageHeader/PageHeader";
 import PageSidebar from "src/components/PageSidebar/PageSidebar";
 
 type Props = {
-  children: any;
+  children: ReactElement;
 };
 
 const PageLayout = ({ children }: Props) => {
