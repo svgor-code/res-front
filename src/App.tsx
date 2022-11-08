@@ -1,12 +1,12 @@
 import "./App.css";
-import { PageLayout } from "./layouts/PageLayout/PaageLayout";
+import PageLayout from "./layouts/PageLayout/PageLayout";
 
-function App() {
+const App = () => {
   return (
     <PageLayout>
       <div>apptsx</div>
     </PageLayout>
   );
-}
+};
 
 export default App;

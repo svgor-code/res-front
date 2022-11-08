@@ -1,4 +1,5 @@
-function PageSidebar() {
+const PageSideBar = () => {
   return <div>PageSidebar</div>;
-}
-export default PageSidebar;
+};
+
+export default PageSideBar;

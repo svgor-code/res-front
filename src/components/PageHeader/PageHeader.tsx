@@ -1,4 +1,5 @@
-function PageHeader() {
+const PageHeader = () => {
   return <div>PageHeader</div>;
-}
+};
+
 export default PageHeader;

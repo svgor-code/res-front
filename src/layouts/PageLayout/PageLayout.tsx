@@ -1,11 +1,11 @@
 import PageHeader from "../../components/PageHeader/PageHeader";
 import PageSidebar from "../../components/PageSidebar/PageSidebar";
 
-type PageLayoutProps = {
+type Props = {
   children: any;
 };
 
-export function PageLayout({ children }: PageLayoutProps) {
+const PageLayout = ({ children }: Props) => {
   return (
     <>
       <PageHeader />
@@ -13,4 +13,6 @@ export function PageLayout({ children }: PageLayoutProps) {
       <PageSidebar />
     </>
   );
-}
+};
+
+export default PageLayout;
