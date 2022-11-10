@@ -9,7 +9,7 @@ type Props = {
 const PageLayout = ({ children }: Props) => {
   return (
     <>
-      <PageHeader />
+      <PageHeader name="Margot Crouch" />
       {children}
       <PageSidebar />
     </>
