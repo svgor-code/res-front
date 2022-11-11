@@ -24,7 +24,7 @@ const CustomAppBar = styled(AppBar)({
     border: "3px solid #164370",
   },
   "& .MuiTypography-root": {
-    margin: " 0 0 0 10px",
+    margin: " 0 0 0 150px",
     color: "#748BA0",
   },
 });
