@@ -4,7 +4,9 @@
 2. Устанавливаем зависимости ```npm install```
 3. Запускаем проект ```npm start```
 
-#
+## Дизайн проекта
+
+https://www.figma.com/file/SomEc4Ummmxxq1yIjIDAmU/Spoon-Restaurant-SAAS-Dashboard?node-id=86%3A170
 
 ## Правила работы с git
 
