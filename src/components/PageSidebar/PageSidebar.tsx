@@ -1,5 +1,4 @@
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 
 import { styled } from "@mui/material/styles";
 
@@ -49,7 +48,7 @@ const CustomBox = styled(Box)({
 });
 
 const PageSideBar = () => {
-  const [state, setState] = React.useState({ left: true });
+  const [state, setState] = useState({ left: true });
 
   const toggleDrawer =
     (anchor: Anchor, open: boolean) =>
