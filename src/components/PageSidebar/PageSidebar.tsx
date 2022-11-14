@@ -11,13 +11,9 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 
-import { ReactComponent as News } from "src/images/svg/news.svg";
-import { ReactComponent as AllOrders } from "src/images/svg/allOrders.svg";
-import { ReactComponent as Booking } from "src/images/svg/booking.svg";
-import { ReactComponent as Delivery } from "src/images/svg/delivery.svg";
-import { ReactComponent as Food } from "src/images/svg/food.svg";
-import { ReactComponent as Kitchen } from "src/images/svg/kitchen.svg";
 import { ReactComponent as Logo } from "src/images/svg/Logo.svg";
+
+import { sidebarArray } from "./SidebarInterface";
 
 type Anchor = "left";
 
@@ -64,90 +60,6 @@ const PageSideBar = () => {
       setState({ ...state, [anchor]: open });
     };
 
-  const list = (anchor: Anchor) => (
-    <CustomBox
-      sx={{ width: 170, paddingTop: 2 }}
-      role="presentation"
-      onClick={toggleDrawer(anchor, false)}
-      onKeyDown={toggleDrawer(anchor, false)}
-    >
-      <ListItemIcon
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          width: 150,
-        }}
-      >
-        <Logo />
-      </ListItemIcon>
-      <Box sx={{ marginTop: 4 }}>
-        <List>
-          <ListItem key={anchor} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <News />
-              </ListItemIcon>
-              <ListItemText>Dashboard</ListItemText>
-            </ListItemButton>
-          </ListItem>
-        </List>
-        <List>
-          <ListItem key={anchor} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <AllOrders />
-              </ListItemIcon>
-              <ListItemText>All Orders</ListItemText>
-            </ListItemButton>
-          </ListItem>
-        </List>
-        <List>
-          <ListItem key={anchor} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Food />
-              </ListItemIcon>
-              <ListItemText>Food Menu</ListItemText>
-            </ListItemButton>
-          </ListItem>
-        </List>
-
-        <List>
-          <ListItem key={anchor} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Kitchen />
-              </ListItemIcon>
-              <ListItemText>Live Kitchen</ListItemText>
-            </ListItemButton>
-          </ListItem>
-        </List>
-        <List>
-          <ListItem key={anchor} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Delivery />
-              </ListItemIcon>
-              <ListItemText>Deliveries/Staff</ListItemText>
-            </ListItemButton>
-          </ListItem>
-        </List>
-
-        <List>
-          <ListItem key={anchor} disablePadding>
-            <ListItemButton>
-              <ListItemIcon>
-                <Booking />
-              </ListItemIcon>
-              <ListItemText>Table Booking</ListItemText>
-            </ListItemButton>
-          </ListItem>
-        </List>
-      </Box>
-    </CustomBox>
-  );
-
   return (
     <div>
       {(["left"] as const).map((anchor) => (
@@ -158,7 +70,35 @@ const PageSideBar = () => {
             open={state[anchor]}
             onClose={toggleDrawer(anchor, false)}
           >
-            {list(anchor)}
+            <CustomBox
+              sx={{ width: 170, paddingTop: 2 }}
+              role="presentation"
+              onClick={toggleDrawer(anchor, false)}
+              onKeyDown={toggleDrawer(anchor, false)}
+            >
+              <ListItemIcon
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
+                  width: 150,
+                }}
+              >
+                <Logo />
+              </ListItemIcon>
+              <Box sx={{ marginTop: 4 }}>
+                {sidebarArray.map((item) => (
+                  <List>
+                    <ListItem key={anchor} disablePadding>
+                      <ListItemButton>
+                        <ListItemIcon>{item.icon}</ListItemIcon>
+                        <ListItemText> {item.text}</ListItemText>
+                      </ListItemButton>
+                    </ListItem>
+                  </List>
+                ))}
+              </Box>
+            </CustomBox>
           </CustomDrawer>
         </React.Fragment>
       ))}

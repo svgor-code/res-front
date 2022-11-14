@@ -20,11 +20,14 @@ const CustomAppBar = styled(AppBar)({
     justifyContent: "space-between",
     alignItems: " center",
   },
+  "& .MuiPaper-root": {
+    backgroundColor: " #051424",
+  },
   "& .MuiAvatar-root": {
     border: "3px solid #164370",
   },
   "& .MuiTypography-root": {
-    margin: " 0 0 0 150px",
+    margin: " 0 0 0 10px",
     color: "#748BA0",
   },
 });
@@ -37,19 +40,21 @@ const styles = {
 const PageHeader = ({ name }: Props) => {
   return (
     <CustomAppBar position="static">
-      <Container maxWidth="xl">
-        <Typography>Hello, {name}, Welcome to Spoon</Typography>
-        <Toolbar disableGutters>
-          <Box sx={styles}>/menu and date picker/</Box>
-        </Toolbar>
-        <Toolbar disableGutters>
-          <Box sx={styles}>
-            <ListItem>/last login/</ListItem>
-            <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
-            <ListItem>{name}</ListItem>
-          </Box>
-        </Toolbar>
-      </Container>
+      <AppBar position="static">
+        <Container maxWidth="xl">
+          <Typography>Hello, {name}, Welcome to Spoon</Typography>
+          <Toolbar disableGutters>
+            <Box sx={styles}>/menu and date picker/</Box>
+          </Toolbar>
+          <Toolbar disableGutters>
+            <Box sx={styles}>
+              <ListItem>/last login/</ListItem>
+              <Avatar alt="Remy Sharp" src="/static/images/avatar/2.jpg" />
+              <ListItem>{name}</ListItem>
+            </Box>
+          </Toolbar>
+        </Container>
+      </AppBar>
     </CustomAppBar>
   );
 };
