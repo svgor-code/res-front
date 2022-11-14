@@ -1,54 +1,26 @@
-# Name
+## Запуск проекта
 
-platform-front
+1. Клонируем проект ```git clone https://github.com/progitpro/platform-front.git```
+2. Устанавливаем зависимости ```npm install```
+3. Запускаем проект ```npm start```
 
-# Description
+#
 
-Restaurant management platform
+## Правила работы с git
 
-# Getting Started with Create React App
+1. Получая новую задачу создаем под неё ветку от dev.
+  - 1.1 Переходим на ветку dev ```git checkout dev```
+  - 1.2 Получаем и мержим в ветку последние изменения ```git pull origin dev``` или просто ```git pull```
+  - 1.3 Создаем ветку от ветки dev ```git checkout -b <название новой ветки>```
+  - 1.4 Название новой ветки должно быть коротким и одновременно отражать суть задачи. Если задача направлена на добавление чего-то нового, в назание ветки указываем префикс ```feature/```. Например, получили задачу ```Добавить левое меню на страницу ордеров```, название ветки можно задать такое: ```feature/orders-left-menu```
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+2. После создания ветки начинаем проводить работу.
 
-## Available Scripts
+3. По окончанию работ создаем commit с вашими изменениями ```git add .``` -> ```git commit -m "Краткое описание проведенных работ"```
 
-In the project directory, you can run:
+4. После создания commit, получаем новые изменения из ветки dev (пока вы работали, в ветке dev что-то могло измениться). Выполняем команду ```git pull origin dev```. Эта команда смержит в вашу девку актуальные изменения из ветки dev.
 
-### `npm start`
+5. Если после мержа ветки dev у вас возникли какие-либо конфликты, решайте их и снова делайте commit (пункт 3).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+6. После всех шагов выше выполняете команду ```git push```, если вашей ветки еще нет в репозитории, git предложит вам иную команду, которая позволит создать ветку в удаленном репозитории, в таком случае выполняем её.
+  
