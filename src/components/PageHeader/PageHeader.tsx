@@ -8,6 +8,8 @@ import Avatar from "@mui/material/Avatar";
 import ListItem from "@mui/material/ListItem";
 import { Typography } from "@mui/material";
 
+import PageSidebar from "src/components/PageSidebar/PageSidebar";
+
 type Props = {
   name: string;
 };
@@ -19,16 +21,21 @@ const CustomAppBar = styled(AppBar)({
     flexDirection: "row",
     justifyContent: "space-between",
     alignItems: " center",
+    position: "relative",
+    width: "95%",
+    margin: "0 0 0 5%",
   },
   "& .MuiPaper-root": {
     backgroundColor: " #051424",
+    fontSize: 14,
   },
   "& .MuiAvatar-root": {
     border: "3px solid #164370",
   },
   "& .MuiTypography-root": {
-    margin: " 0 0 0 10px",
     color: "#748BA0",
+    fontSize: 14,
+    margin: "0 0 0 10px",
   },
 });
 const styles = {
@@ -42,6 +49,7 @@ const PageHeader = ({ name }: Props) => {
     <CustomAppBar position="static">
       <AppBar position="static">
         <Container maxWidth="xl">
+          <PageSidebar />
           <Typography>Hello, {name}, Welcome to Spoon</Typography>
           <Toolbar disableGutters>
             <Box sx={styles}>/menu and date picker/</Box>

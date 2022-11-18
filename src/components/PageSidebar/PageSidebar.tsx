@@ -19,28 +19,43 @@ import { sidebarArray } from "./SidebarInterface";
 const ID = Date.now();
 
 const CustomDrawer = styled(Drawer)({
-  "& .MuiBackdrop-root": {
-    backgroundColor: "transparent",
+  "& .MuiPaper-root": {
+    backgroundColor: "#01070E",
+    overflowX: "hidden",
+    position: "fixed",
+    zIndex: 1,
   },
   "& .MuiBox-root": {
     backgroundColor: "#051424",
     color: "#869AAF",
+    overflowX: "hidden",
+    "&:hover": {
+      color: "#FFFFFF",
+    },
   },
-  "& .MuiPaper-root": {
-    backgroundColor: "#01070E",
-  },
-  "& .Mui-active": {
-    backgroundColor: "#0247FF",
+  "& .MuiBackdrop-root": {
+    backgroundColor: "transparent",
   },
 });
 const CustomBox = styled(Box)({
   "& .MuiListItemText-root": {
     padding: 0,
+    color: "#869AAF",
+    "&:hover": {
+      color: "#FFFFFF",
+    },
   },
   "& .MuiListItemIcon-root": {
     padding: 0,
     margin: 4,
     minWidth: 25,
+  },
+  "& .MuiListItem-root": {
+    width: "100%",
+    "&:hover": {
+      backgroundColor: "#0247FF",
+      color: "#FFFFFF",
+    },
   },
 });
 
@@ -50,38 +65,12 @@ const styles = {
 };
 
 const PageSideBar = () => {
-  const [state, setState] = useState({ left: true });
-
-  const toggleDrawer =
-    (anchor: "left", open: boolean) =>
-    (event: React.KeyboardEvent | React.MouseEvent) => {
-      if (
-        event.type === "keydown" &&
-        ((event as React.KeyboardEvent).key === "Tab" ||
-          (event as React.KeyboardEvent).key === "Shift")
-      ) {
-        return;
-      }
-
-      setState({ ...state, [anchor]: open });
-    };
-
   return (
     <div>
       {(["left"] as const).map((anchor) => (
         <React.Fragment key={anchor}>
-          <Button onClick={toggleDrawer(anchor, true)}>open</Button>
-          <CustomDrawer
-            anchor={anchor}
-            open={true}
-            onClose={toggleDrawer(anchor, false)}
-          >
-            <CustomBox
-              sx={{ width: 170, paddingTop: 2 }}
-              role="presentation"
-              onClick={toggleDrawer(anchor, false)}
-              onKeyDown={toggleDrawer(anchor, false)}
-            >
+          <CustomDrawer anchor={anchor} open={true}>
+            <CustomBox sx={{ width: 170, paddingTop: 2 }} role="presentation">
               <ListItemIcon
                 sx={{
                   display: "flex",
