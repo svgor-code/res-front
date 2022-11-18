@@ -1,12 +1,8 @@
-import "./App.css";
-import PageLayout from "./layouts/PageLayout/PageLayout";
+import "src/App.css";
+import RoutesWrapper from "src/routing";
 
 const App = () => {
-  return (
-    <PageLayout>
-      <div>apptsx</div>
-    </PageLayout>
-  );
+  return <RoutesWrapper />;
 };
 
 export default App;
