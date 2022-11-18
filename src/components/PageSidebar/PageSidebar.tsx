@@ -73,7 +73,7 @@ const PageSideBar = () => {
           <Button onClick={toggleDrawer(anchor, true)}>open</Button>
           <CustomDrawer
             anchor={anchor}
-            open={state[anchor]}
+            open={true}
             onClose={toggleDrawer(anchor, false)}
           >
             <CustomBox
