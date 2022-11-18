@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 
 import { styled } from "@mui/material/styles";
 
@@ -15,7 +16,7 @@ import { ReactComponent as Logo } from "src/images/svg/Logo.svg";
 
 import { sidebarArray } from "./SidebarInterface";
 
-type Anchor = "left";
+const ID = Date.now();
 
 const CustomDrawer = styled(Drawer)({
   "& .MuiBackdrop-root": {
@@ -43,11 +44,16 @@ const CustomBox = styled(Box)({
   },
 });
 
+const styles = {
+  color: "#FFFFFF",
+  textDecoration: "none",
+};
+
 const PageSideBar = () => {
   const [state, setState] = useState({ left: true });
 
   const toggleDrawer =
-    (anchor: Anchor, open: boolean) =>
+    (anchor: "left", open: boolean) =>
     (event: React.KeyboardEvent | React.MouseEvent) => {
       if (
         event.type === "keydown" &&
@@ -88,12 +94,14 @@ const PageSideBar = () => {
               </ListItemIcon>
               <Box sx={{ marginTop: 4 }}>
                 {sidebarArray.map((item) => (
-                  <List>
+                  <List key={ID}>
                     <ListItem key={anchor} disablePadding>
-                      <ListItemButton>
-                        <ListItemIcon>{item.icon}</ListItemIcon>
-                        <ListItemText> {item.text}</ListItemText>
-                      </ListItemButton>
+                      <Link style={styles} to={item.path}>
+                        <ListItemButton>
+                          <ListItemIcon>{item.icon}</ListItemIcon>
+                          <ListItemText> {item.text}</ListItemText>
+                        </ListItemButton>
+                      </Link>
                     </ListItem>
                   </List>
                 ))}
