@@ -5,7 +5,6 @@ import { styled } from "@mui/material/styles";
 
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import Button from "@mui/material/Button";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import ListItemButton from "@mui/material/ListItemButton";
@@ -15,8 +14,6 @@ import ListItemText from "@mui/material/ListItemText";
 import { ReactComponent as Logo } from "src/images/svg/Logo.svg";
 
 import { sidebarArray } from "./SidebarInterface";
-
-const ID = Date.now();
 
 const CustomDrawer = styled(Drawer)({
   "& .MuiPaper-root": {
@@ -69,7 +66,7 @@ const PageSideBar = () => {
     <div>
       {(["left"] as const).map((anchor) => (
         <React.Fragment key={anchor}>
-          <CustomDrawer anchor={anchor} open={true}>
+          <CustomDrawer variant="persistent" anchor={anchor} open={true}>
             <CustomBox sx={{ width: 170, paddingTop: 2 }} role="presentation">
               <ListItemIcon
                 sx={{
@@ -83,7 +80,7 @@ const PageSideBar = () => {
               </ListItemIcon>
               <Box sx={{ marginTop: 4 }}>
                 {sidebarArray.map((item) => (
-                  <List key={ID}>
+                  <List key={item.text}>
                     <ListItem key={anchor} disablePadding>
                       <Link style={styles} to={item.path}>
                         <ListItemButton>
