@@ -1,6 +1,6 @@
 import React from "react";
 
-const Allorders = () => {
+const Orders = () => {
   return <div>Allorders</div>;
 };
-export default Allorders;
+export default Orders;

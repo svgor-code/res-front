@@ -1,4 +1,5 @@
 import React from "react";
+<<<<<<< HEAD
 import style from './Dashboard.module.css'
 import NewOrders from "./NewOrders/NewOrders";
 import ProcessOrders from "./ProcessOrders/ProcessOrders";
@@ -43,6 +44,11 @@ const Dashboard = () => {
             </div>
         </div>
     );
+=======
+
+const Dashboard = () => {
+  return <div>Dashboard</div>;
+>>>>>>> 284c0bf1db3bd15841d50a6c0c318b59e3950894
 };
 
 export default Dashboard;

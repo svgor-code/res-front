@@ -1,7 +1,7 @@
 import React from "react";
 
-const Foodmenu = () => {
+const Menu = () => {
   return <div>Foodmenu</div>;
 };
 
-export default Foodmenu;
+export default Menu;
