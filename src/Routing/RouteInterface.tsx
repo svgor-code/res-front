@@ -1,7 +1,7 @@
 import React, { lazy, ReactElement } from "react";
 
 const Allorders = lazy(() => import("src/pages/Allorders"));
-const Dashboard = lazy(() => import("src/pages/Dashboard"));
+const Dashboard = lazy(() => import("src/pages/Dashboard/Dashboard"));
 const Foodmenu = lazy(() => import("src/pages/Foodmenu"));
 const Staff = lazy(() => import("src/pages/Staff"));
 const Kitchen = lazy(() => import("src/pages/Kitchen"));

@@ -1,0 +1,111 @@
+.liveKitchen {
+    min-width: 360px;
+    border: 0.5px solid #153453;
+    border-radius: 6px;
+    background: #081A2C;
+    padding: 28px 22px;
+    margin: 17px 35px 0px 18px;
+}
+
+.liveKitchen__name {
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.liveKitchen__working {
+    display: flex;
+    margin-top: 33px;
+    margin-bottom: 20px;
+}
+
+.liveKitchen__infoLive {
+    margin-left: 20px;
+}
+
+.liveKitchen__camera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.liveKitchen__onlineTable {
+    display: flex;
+}
+
+.liveKitchen__number {
+    width: 31px;
+    height: 31px;
+    background: #1B5AFF;
+    border-radius: 6px;
+    margin-right: 10px;
+}
+
+.liveKitchen__span {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 16px;
+    color: #FFFFFF;
+}
+
+.liveKitchen__text {
+    max-width: 73px;
+    text-align: start;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 15px;
+    color: #7E89A8;
+}
+
+.liveKitchen__chef {
+    display: flex;
+    justify-content: space-between;
+}
+
+.liveKitchen__body {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0px 7px;
+    min-width: 160px;
+    min-height: 56px;
+    background: #0F2439;
+    border-radius: 7px;
+}
+
+.liveKitchen__chefOnline {
+    display: flex;
+    justify-content: center;
+    min-width: 36px;
+    min-height: 16px;
+    background: #4B2C57;
+    border-radius: 3px;
+}
+
+.liveKitchen__chefSpan {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 10px;
+    line-height: 12px;
+    display: flex;
+    align-items: center;
+    color: #FA59C7;
+}
+
+.liveKitchen__chefWork {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7E89A8;
+
+}

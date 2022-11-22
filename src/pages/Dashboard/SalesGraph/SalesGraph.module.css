@@ -1,0 +1,42 @@
+.salesGraph {
+    min-width: 472px;
+    border: 1px solid #153453;
+    border-radius: 6px;
+    background: #081A2C;
+    padding: 28px 28px;
+    margin: 17px 0px 0px 18px;
+}
+.salesGraph__block{
+    display: flex;
+    align-items: center;
+}
+.salesGraph__name {
+    margin-top: 30px;
+    margin-right: 206px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.salesGraph__date {
+    display: flex;
+    align-items: center;
+}
+
+.salesGraph__text{
+    max-width: 62px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    color: #7E89A8;
+}
+
+.salesGraph__button{
+    margin-left: 5px;
+    cursor: pointer;
+    background: none;
+    border: none;
+}

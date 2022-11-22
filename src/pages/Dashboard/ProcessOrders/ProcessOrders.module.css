@@ -1,0 +1,81 @@
+.processOrders {
+    text-align: center;
+    min-width: 255px;
+    border: 0.5px solid #153453;
+    border-radius: 6px;
+    background: #081A2C;
+    margin: 17px 0px 0px 18px;
+}
+
+.processOrders__info {
+    margin-top: 32px;
+}
+
+.processOrders__number {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: -0.05em;
+    background: linear-gradient(94.19deg, #F26522 2.34%, #FF0661 108.74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.processOrders__block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 53px;
+    top: 17px;
+    max-width: 150px;
+    min-height: 35px;
+    background: #0F2439;
+    border-radius: 6px;
+}
+
+.processOrders__span{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+
+    color: #FFFFFF;
+}
+
+.processOrders__descr {
+    position: relative;
+    text-align: center;
+    max-width: 131px;
+    margin-top: 21px;
+    left: 60px;
+}
+
+.processOrders__descrSpan {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: #7E89A8;
+}
+
+.processOrders__viewAll {
+    margin-top: 23px;
+}
+
+.processOrders__button {
+    width: 98px;
+    height: 30px;
+    border-radius: 5px;
+    background: #073374;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+}
+
+.processOrders__button:hover {
+    transition: all .3s;
+    background-color: #082350;
+}

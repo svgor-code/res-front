@@ -1,0 +1,54 @@
+.tableBooking {
+    text-align: center;
+    min-width: 448px;
+    border: 0.5px solid #153453;
+    border-radius: 6px;
+    background: #081A2C;
+    margin: 17px 0px 0px 18px;
+}
+
+.tableBooking__text {
+    display: flex;
+    justify-content: flex-start;
+    margin-left: 19px;
+    margin-top: 25px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.tableBooking__body {
+    display: flex;
+    justify-content: space-around;
+}
+
+.tableBooking__number {
+    margin-top: 33px;
+    min-width: 113px;
+    min-height: 125px;
+    background: #0F2439;
+    border-radius: 10px;
+}
+
+.tableBooking__span {
+    position: relative;
+    top: 16px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: -0.05em;
+    color: #FFFFFF;
+}
+
+.tableBooking__descr{
+    position: relative;
+    top: 68px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E89A8;
+}

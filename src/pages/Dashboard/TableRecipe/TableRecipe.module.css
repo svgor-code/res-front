@@ -1,0 +1,145 @@
+.tableRecipe {
+    min-width: 330px;
+    border: 1px solid #153453;
+    border-radius: 6px;
+    background: #081A2C;
+    padding: 28px 28px;
+    margin: 17px 0px 0px 18px;
+}
+
+.tableRecipe__name {
+    width: 147px;
+    margin-top: 30px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 21px;
+    color: #FFFFFF;
+}
+
+.tableRecipe__blocks {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 28px;
+    margin-bottom: 31px;
+}
+
+.tableRecipe__veg,
+.tableRecipe__nonVeg {
+    text-align: center;
+    width: 152px;
+    height: 136px;
+    background: #061321;
+    border-radius: 10px;
+}
+
+.tableRecipe__numberVeg,
+.tableRecipe__numberNonVeg {
+    margin-top: 24px;
+    margin-bottom: 21px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 35px;
+    color: #FC224F;
+}
+
+.tableRecipe__numberNonVeg {
+    color: #14CC74;
+}
+
+.tableRecipe__text {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    color: #7E89A8;
+
+}
+
+.tableRecipe__info {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #7E89A8;
+}
+
+.tableRecipe__populars {
+    margin-top: 28px;
+}
+
+.tableRecipe__popular {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tableRecipe__popularBlock {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.tableRecipe__popularItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 28px;
+    height: 28px;
+    border: 1px solid #4B2C57;
+    border-radius: 6px;
+}
+
+.tableRecipe__popularSpan {
+    font-size: 12px;
+    line-height: 14px;
+    color: #FA59C7;
+}
+
+.tableRecipe__popularName {
+    margin-left: 12px;
+    width: 88px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7E89A8;
+}
+
+.tableRecipe__popularImage {
+    display: flex;
+    align-items: center;
+}
+
+.tableRecipe__popularRating {
+    margin-left: 7px;
+    font-size: 12px;
+    line-height: 14px;
+    color: #7E89A8;
+}
+
+.tableRecipe__line{
+    margin-top: 19px;
+    margin-bottom: 37px;
+    width: 319px;
+    border: 0.5px dashed #2A527A;
+}
+
+.tableRecipe__viewAll{
+    display: flex;
+    justify-content: end;
+}
+
+.tableRecipe__button{
+    width: 88.83px;
+    height: 27.47px;
+    border-radius: 5px;
+    background: #073374;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+}
+
+.tableRecipe__button:hover {
+    transition: all .3s;
+    background-color: #082350;
+}

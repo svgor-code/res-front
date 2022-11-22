@@ -1,0 +1,18 @@
+.dashboard {
+    min-height: 100vh;
+    background-color: #030f1c;
+}
+
+.dashboardGrid {
+    padding-bottom: 32px;
+    margin-left: 168px;
+}
+
+.dashboard__upBlock{
+    display: flex;
+}
+
+.dashboard__downBlock{
+    display: flex;
+    min-height: 617px;
+}

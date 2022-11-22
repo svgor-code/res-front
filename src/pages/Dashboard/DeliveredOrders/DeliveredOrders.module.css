@@ -1,0 +1,82 @@
+.deliveredOrders {
+    text-align: center;
+    min-width: 255px;
+    border: 0.5px solid #153453;
+    border-radius: 6px;
+    background: #081A2C;
+    margin: 17px 0px 0px 18px;
+}
+
+.deliveredOrders__info {
+    margin-top: 32px;
+}
+
+.deliveredOrders__number {
+    font-style: normal;
+    font-weight: 500;
+    font-size: 60px;
+    line-height: 70px;
+    letter-spacing: -0.05em;
+    background: linear-gradient(94.19deg, #F26522 2.34%, #FF0661 108.74%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.deliveredOrders__block{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    left: 53px;
+    top: 17px;
+    max-width: 150px;
+    min-height: 35px;
+    background: #14CC74;
+    opacity: 0.2;
+    border-radius: 6px;
+}
+.deliveredOrders__blockOpacity{
+}
+.deliveredOrders__span{
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #20A867;
+}
+
+.deliveredOrders__descr {
+    position: relative;
+    text-align: center;
+    max-width: 131px;
+    margin-top: 21px;
+    left: 60px;
+}
+
+.deliveredOrders__descrSpan {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 11px;
+    line-height: 13px;
+    text-align: center;
+    color: #7E89A8;
+}
+
+.deliveredOrders__viewAll {
+    margin-top: 23px;
+}
+
+.deliveredOrders__button {
+    width: 98px;
+    height: 30px;
+    border-radius: 5px;
+    background: #073374;
+    color: #FFFFFF;
+    cursor: pointer;
+    border: none;
+}
+
+.deliveredOrders__button:hover {
+    transition: all .3s;
+    background-color: #082350;
+}
