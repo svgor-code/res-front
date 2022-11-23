@@ -6,18 +6,17 @@ import DeliveredOrders from "./DeliveredOrders/DeliveredOrders";
 import TableBooking from "./TableBooking/TableBooking";
 import LiveKitchen from "./LiveKitchen/LiveKitchen";
 import SalesGraph from "./SalesGraph/SalesGraph";
-import TableDetalis from "./TableDetalis/TableDetalis";
+import TableDetails from "./TableDetails/TableDetails";
 import TableRecipe from "./TableRecipe/TableRecipe";
 import TableDishes from "./TableDishes/TableDishes";
 
 const ContainerDashboard = styled('div')({
-    minHeight: "100vh",
-    backgroundColor: '#030f1c'
+    minHeight: "93vh",
+    backgroundColor: '#030f1c',
 });
 
 const DashboardGrid = styled('div')({
-    paddingBottom: "32px",
-    marginLeft: "168px"
+    marginLeft: "180px"
 });
 
 const DashboardUpBlock = styled('div')({
@@ -27,7 +26,10 @@ const DashboardUpBlock = styled('div')({
 
 const DashboardDownBlock = styled('div')({
     display: "flex",
-    minHeight: "617px"
+    minHeight: "617px",
+    "@media (max-width:1900px)":{
+        minHeight: "550px",
+    }
 });
 
 
@@ -53,7 +55,7 @@ const Dashboard = () => {
                 <DashboardDownBlock>
                     <SalesGraph/>
 
-                    <TableDetalis/>
+                    <TableDetails/>
 
                     <TableRecipe/>
 
