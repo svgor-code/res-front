@@ -1,34 +1,34 @@
 import React from "react";
 import {styled} from '@mui/system';
-import NewOrders from "./NewOrders/NewOrders";
-import ProcessOrders from "./ProcessOrders/ProcessOrders";
-import DeliveredOrders from "./DeliveredOrders/DeliveredOrders";
-import TableBooking from "./TableBooking/TableBooking";
-import LiveKitchen from "./LiveKitchen/LiveKitchen";
-import SalesGraph from "./SalesGraph/SalesGraph";
-import TableDetails from "./TableDetails/TableDetails";
-import TableRecipe from "./TableRecipe/TableRecipe";
-import TableDishes from "./TableDishes/TableDishes";
+import NewOrders from "./Content/NewOrders/NewOrders";
+import ProcessOrders from "./Content/ProcessOrders/ProcessOrders";
+import DeliveredOrders from "./Content/DeliveredOrders/DeliveredOrders";
+import TableBooking from "./Content/TableBooking/TableBooking";
+import LiveKitchen from "./Content/LiveKitchen/LiveKitchen";
+import SalesGraph from "./Content/SalesGraph/SalesGraph";
+import TableDetails from "./Content/TableDetails/TableDetails";
+import TableRecipe from "./Content/TableRecipe/TableRecipe";
+import TableDishes from "./Content/TableDishes/TableDishes";
 
 const ContainerDashboard = styled('div')({
-    minHeight: "93vh",
+    minHeight: "calc(100vh - 64px)",
     backgroundColor: '#030f1c',
 });
 
 const DashboardGrid = styled('div')({
-    marginLeft: "180px"
+    marginLeft: "184px"
 });
 
 const DashboardUpBlock = styled('div')({
     display: "flex",
-    minHeight: "294px"
+    minHeight: "320px"
 });
 
 const DashboardDownBlock = styled('div')({
     display: "flex",
     minHeight: "617px",
     "@media (max-width:1900px)":{
-        minHeight: "550px",
+        minHeight: "525px",
     }
 });
 
@@ -61,6 +61,7 @@ const Dashboard = () => {
 
                     <TableDishes/>
                 </DashboardDownBlock>
+
             </DashboardGrid>
 
         </ContainerDashboard>
