@@ -1,24 +1,23 @@
 import React from 'react';
 import {styled} from "@mui/system";
 
-const BlockTableBooking = styled('div')({
-    Width: "100%",
-    borderRadius:"6px",
+const BlockTableDetails = styled('div')({
+    width: "18%",
+    borderRadius: "6px",
     border: "0.5px solid #153453",
     background: "#081A2C",
     margin: "17px 0px 0px 18px",
     "@media (max-width:1900px)":{
-        minWidth: "400px",
         margin: "15px 0px 0px 14px",
     }
 });
 
-const TableBooking = () => {
+const TableDetails = () => {
     return (
-        <BlockTableBooking>
+        <BlockTableDetails>
 
-        </BlockTableBooking>
+        </BlockTableDetails>
     );
 };
 
-export default TableBooking;
+export default TableDetails;

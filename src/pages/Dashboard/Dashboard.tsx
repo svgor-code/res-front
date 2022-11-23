@@ -1,14 +1,14 @@
 import React from "react";
 import {styled} from '@mui/system';
-import NewOrders from "./Content/NewOrders/NewOrders";
-import ProcessOrders from "./Content/ProcessOrders/ProcessOrders";
-import DeliveredOrders from "./Content/DeliveredOrders/DeliveredOrders";
-import TableBooking from "./Content/TableBooking/TableBooking";
-import LiveKitchen from "./Content/LiveKitchen/LiveKitchen";
-import SalesGraph from "./Content/SalesGraph/SalesGraph";
-import TableDetails from "./Content/TableDetails/TableDetails";
-import TableRecipe from "./Content/TableRecipe/TableRecipe";
-import TableDishes from "./Content/TableDishes/TableDishes";
+import NewOrders from "../../components/Dashboard/Content/NewOrders/NewOrders";
+import ProcessOrders from "../../components/Dashboard/Content/ProcessOrders/ProcessOrders";
+import DeliveredOrders from "../../components/Dashboard/Content/DeliveredOrders/DeliveredOrders";
+import TableBooking from "../../components/Dashboard/Content/TableBooking/TableBooking";
+import LiveKitchen from "../../components/Dashboard/Content/LiveKitchen/LiveKitchen";
+import SalesGraph from "../../components/Dashboard/Content/SalesGraph/SalesGraph";
+import TableDetails from "../../components/Dashboard/Content/TableDetails/TableDetails";
+import TableRecipe from "../../components/Dashboard/Content/TableRecipe/TableRecipe";
+import TableDishes from "../../components/Dashboard/Content/TableDishes/TableDishes";
 
 const ContainerDashboard = styled('div')({
     minHeight: "calc(100vh - 64px)",
@@ -21,47 +21,36 @@ const DashboardGrid = styled('div')({
 
 const DashboardUpBlock = styled('div')({
     display: "flex",
-    minHeight: "320px"
+    height: "300px"
 });
 
 const DashboardDownBlock = styled('div')({
     display: "flex",
-    minHeight: "617px",
+    height: "600px",
     "@media (max-width:1900px)":{
-        minHeight: "525px",
+        height: "525px",
     }
 });
 
-
 const Dashboard = () => {
-
     return (
         <ContainerDashboard>
 
             <DashboardGrid>
-
                 <DashboardUpBlock>
                     <NewOrders/>
-
                     <ProcessOrders/>
-
                     <DeliveredOrders/>
-
                     <TableBooking/>
-
                     <LiveKitchen/>
                 </DashboardUpBlock>
 
                 <DashboardDownBlock>
                     <SalesGraph/>
-
                     <TableDetails/>
-
                     <TableRecipe/>
-
                     <TableDishes/>
                 </DashboardDownBlock>
-
             </DashboardGrid>
 
         </ContainerDashboard>

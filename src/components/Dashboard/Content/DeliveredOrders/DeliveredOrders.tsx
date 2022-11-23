@@ -1,24 +1,23 @@
 import React from 'react';
 import {styled} from "@mui/system";
 
-const BlockProcessOrders = styled('div')({
-    Width: "100%",
-    borderRadius:"6px",
+const BlockDeliveredOrders = styled('div')({
+    width: "15%",
+    borderRadius: "6px",
     border: "0.5px solid #153453",
     background: "#081A2C",
     margin: "17px 0px 0px 18px",
     "@media (max-width:1900px)":{
-        minWidth: "220px",
         margin: "15px 0px 0px 14px",
     }
 });
 
-const ProcessOrders = () => {
+const DeliveredOrders = () => {
     return (
-        <BlockProcessOrders>
-            
-        </BlockProcessOrders>
+        <BlockDeliveredOrders>
+
+        </BlockDeliveredOrders>
     );
 };
 
-export default ProcessOrders;
+export default DeliveredOrders;
