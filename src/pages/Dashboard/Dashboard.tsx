@@ -9,7 +9,6 @@ import SalesGraph from "../../components/Dashboard/Content/SalesGraph/SalesGraph
 import TableDetails from "../../components/Dashboard/Content/TableDetails/TableDetails";
 import TableRecipe from "../../components/Dashboard/Content/TableRecipe/TableRecipe";
 import TableDishes from "../../components/Dashboard/Content/TableDishes/TableDishes";
-import IncomeCard from "src/components/Dashboard/IncomeCard/IncomeCard";
 
 const ContainerDashboard = styled("div")({
   minHeight: "calc(100vh - 64px)",
