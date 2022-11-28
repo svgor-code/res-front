@@ -15,13 +15,13 @@ import { ReactComponent as Icon } from "src/images/svg/icon.svg";
 
 import DateModal from "./DateModal";
 
-const CustomBox = styled(Box)({
+const WrapperBox = styled("div")({
+  border: "1px solid #153453",
+  height: "100%",
+  width: "100%",
+  padding: 1,
   "& .MuiPaper-root": {
     backgroundColor: "#081A2C",
-    border: "1px solid #153453",
-    height: "100%",
-    width: "100%",
-    padding: 1,
   },
   "& .MuiButton-root": {
     textTransform: "none",
@@ -32,17 +32,16 @@ const CustomBox = styled(Box)({
     height: 5,
   },
 });
-const CustomBox2 = styled(Box)({
-  "& .MuiBox-root": {
-    margin: "20px 0 0 0",
-    color: "#7E89A8",
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-  },
+const DateBox = styled("div")({
+  margin: "20px 0 0 0",
+  color: "#7E89A8",
+  display: "flex",
+  flexDirection: "row",
+  alignItems: "center",
   "& .MuiButton-root": {
     color: "#7E89A8",
     padding: 0,
+    margin: "0 5px 0 0",
     textAlign: "center",
   },
 });
@@ -74,26 +73,30 @@ const TotalBox = styled(Box)({
     },
   },
 });
-const CustomTypography = styled(Typography)({
-  "& .MuiTypography-root": {
-    fontSize: 12,
-    textAlign: "start",
-    width: "100px",
-  },
+const DetailsBox = styled("div")({
+  fontSize: 12,
+  display: "flex",
+  flexDirection: "column",
+  justifyContent: "flex-start",
+  alignItems: "flex-start",
 });
-const CustomContainer = styled(Container)({
+const RefundContainer = styled(Container)({
   "& .MuiBox-root": {
     backgroundColor: "rgba(255, 91, 203, 0.27)",
     color: "#FA62CA",
   },
 });
-const CustomContainer1 = styled(Container)({
+const EarnContainer = styled(Container)({
   "& .MuiBox-root": {
     backgroundColor: "rgba(0, 242, 170, 0.16)",
     color: "#06CB55",
   },
 });
-const CustomCardActions = styled(CardActions)({
+const WrapperCardActions = styled(CardActions)({
+  display: "flex",
+  flexDirection: "column",
+  alignItems: "center",
+  justifyContent: "center",
   "& .MuiBox-root": {
     backgroundColor: "rgba(230, 165, 255, 0.08)",
     color: "rgba(219, 167, 192, 0.54)",
@@ -105,7 +108,6 @@ const CustomCardActions = styled(CardActions)({
     justifyContent: "space-between",
     borderRadius: "6px",
     padding: 1,
-    margin: 2,
     marginTop: 30,
     "& .MuiTypography-root": {
       fontSize: 9,
@@ -116,63 +118,59 @@ const CustomCardActions = styled(CardActions)({
 
 const EarningDetails = () => {
   return (
-    <CustomBox>
-      <Box>
-        <Card variant="outlined">
-          <React.Fragment>
-            <CardContent>
-              <Typography
-                sx={{
-                  color: "#FFFFFF",
-                  fontWeight: 600,
-                  fontSize: 15,
-                }}
-              >
-                All Earning Details
-              </Typography>
-              <CustomBox2>
-                <Box>
-                  <Button size="small">
-                    <DateModal />
-                  </Button>
-                  <Calendar />
-                </Box>
-              </CustomBox2>
-              <TotalBox>
-                <Box>
-                  <CustomContainer1>
-                    <CustomTypography>
-                      <Typography>Total Earnings this Month</Typography>
-                      <Button size="small">view all details</Button>
-                    </CustomTypography>
-                    <Box>$478</Box>
-                  </CustomContainer1>
-                  <CustomContainer>
-                    <CustomTypography>
-                      <Typography>Total refund this Month</Typography>
-                      <Button size="small">view all details</Button>
-                    </CustomTypography>
-                    <Box>$23</Box>
-                  </CustomContainer>
-                </Box>
-              </TotalBox>
-            </CardContent>
-            <CustomCardActions>
+    <WrapperBox>
+      <Card variant="outlined">
+        <React.Fragment>
+          <CardContent>
+            <Typography
+              sx={{
+                color: "#FFFFFF",
+                fontWeight: 600,
+                fontSize: 15,
+              }}
+            >
+              All Earning Details
+            </Typography>
+            <DateBox>
+              <Button size="small">
+                <DateModal />
+              </Button>
+              <Calendar />
+            </DateBox>
+            <TotalBox>
               <Box>
-                <Typography>
-                  <Icon />
-                </Typography>
-                <Typography>
-                  Payment defaults. Completely predominate cross-unit ideas for
-                  transparent customer service. Assertively iterate
-                  enterprise-wide internal or "organic" sources.
-                </Typography>
+                <EarnContainer>
+                  <DetailsBox>
+                    <Typography>Total Earnings this Month</Typography>
+                    <Button size="small">view all details</Button>
+                  </DetailsBox>
+                  <Box>$478</Box>
+                </EarnContainer>
+                <RefundContainer>
+                  <DetailsBox>
+                    <Typography>Total refund this Month</Typography>
+                    <Button size="small">view all details</Button>
+                  </DetailsBox>
+                  <Box>$23</Box>
+                </RefundContainer>
               </Box>
-            </CustomCardActions>
-          </React.Fragment>
-        </Card>
-      </Box>
-    </CustomBox>
+            </TotalBox>
+          </CardContent>
+          <WrapperCardActions>
+            <Box>
+              <Typography>
+                <Icon />
+              </Typography>
+              <Typography>
+                Payment defaults. Completely predominate cross-unit ideas for
+                transparent customer service. Assertively iterate
+                enterprise-wide internal or "organic" sources.
+              </Typography>
+            </Box>
+          </WrapperCardActions>
+        </React.Fragment>
+      </Card>
+    </WrapperBox>
   );
 };
 
