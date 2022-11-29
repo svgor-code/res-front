@@ -1,5 +1,5 @@
 import React from "react";
-import {styled} from '@mui/system';
+import { styled } from '@mui/system';
 import NewOrders from "../../components/Dashboard/Content/NewOrders/NewOrders";
 import ProcessOrders from "../../components/Dashboard/Content/ProcessOrders/ProcessOrders";
 import DeliveredOrders from "../../components/Dashboard/Content/DeliveredOrders/DeliveredOrders";

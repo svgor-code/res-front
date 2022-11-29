@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import {styled} from "@mui/system";
-import ratingImg from '../../../../images/svg/rating.svg'
+import ratingImg from './rating.svg'
 
 const BlockTableRecipe = styled('div')({
     width: "19.2%",
@@ -229,17 +229,17 @@ const TableRecipe = () => {
                 Popular Dishes
             </BlockPopulars>
 
-            {dishes.map((el, i) =>
-                <PopularsBody>
+            {dishes.map((dish, index) =>
+                <PopularsBody key={index}>
                     <PopularsItems>
                         <PopularsItemLeft>
                             <PopularsItem>
                                 <PopularsItemSpan>
-                                    {el.number}
+                                    {dish.number}
                                 </PopularsItemSpan>
                             </PopularsItem>
                             <PopularsItemName>
-                                {el.name}
+                                {dish.name}
                             </PopularsItemName>
                         </PopularsItemLeft>
 
@@ -249,7 +249,7 @@ const TableRecipe = () => {
                             </PopularsItemRightImg>
 
                             <PopularsItemRightRating>
-                                {el.rating}
+                                {dish.rating}
                             </PopularsItemRightRating>
                         </PopularsItemRight>
                     </PopularsItems>
