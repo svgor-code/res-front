@@ -32,8 +32,6 @@ const DashboardDownBlock = styled("div")({
   },
 });
 
-
-
 const Dashboard = () => {
   return (
     <ContainerDashboard>
