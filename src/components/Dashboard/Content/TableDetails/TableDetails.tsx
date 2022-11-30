@@ -15,14 +15,18 @@ import { ReactComponent as Icon } from "src/images/svg/icon.svg";
 
 import DateModal from "./DateModal";
 
-const CustomBox = styled(Box)({
+const BlockTableDetails = styled("div")({
+  width: "18%",
+  borderRadius: "6px",
+  border: "0.5px solid #153453",
+  background: "#081A2C",
+  margin: "17px 0px 0px 18px",
+  "& .MuiCardContent-root": {
+    padding: 0,
+  },
   "& .MuiPaper-root": {
     backgroundColor: "#081A2C",
-    border: "1px solid #153453",
-    width: 250,
-    height: 480,
-    margin: "0 0 0 200px",
-    padding: 1,
+    padding: "25px",
   },
   "& .MuiButton-root": {
     textTransform: "none",
@@ -32,7 +36,28 @@ const CustomBox = styled(Box)({
     width: "90%",
     height: 5,
   },
+  "@media (max-width:1900px)": {
+    margin: "15px 0px 0px 14px",
+  },
 });
+
+const BlockName = styled("span")({
+  width: "147px",
+  fontWeight: "500",
+  fontSize: "18px",
+  lineHeight: "21px",
+  color: "#FFFFFF",
+});
+
+const BlockTotalSpan = styled("span")({
+  textAlign: "center",
+  fontStyle: "normal",
+  fontWeight: "400",
+  fontSize: "14px",
+  lineHeight: "16px",
+  color: "#7E89A8",
+});
+
 const styles = {
   margin: "20px 0 0 0",
   color: "#7E89A8",
@@ -45,11 +70,7 @@ const styles = {
     textAlign: "center",
   },
 };
-const Typographystyles = {
-  fontSize: 12,
-  textAlign: "start",
-  width: "100px",
-};
+
 const totalStyles = {
   margin: "10px 0 0 0",
   color: "#7E89A8",
@@ -104,20 +125,12 @@ const disclaimerStyles = {
 };
 const EarningDetails = () => {
   return (
-    <CustomBox>
+    <BlockTableDetails>
       <Box>
         <Card variant="outlined">
           <React.Fragment>
             <CardContent>
-              <Typography
-                sx={{
-                  color: "#FFFFFF",
-                  fontWeight: 600,
-                  fontSize: 15,
-                }}
-              >
-                All Earning Details
-              </Typography>
+              <BlockName>All Earning Details</BlockName>
               <Box sx={styles}>
                 <Button size="small">
                   <DateModal />
@@ -127,18 +140,15 @@ const EarningDetails = () => {
               <Box sx={totalStyles}>
                 <Container>
                   <Typography>
-                    <Typography sx={Typographystyles}>
-                      Total Earnings this Month
-                    </Typography>
+                    <BlockTotalSpan>Total Earnings this Month</BlockTotalSpan>
+
                     <Button size="small">view all details</Button>
                   </Typography>
                   <Box sx={earningStyle}>$478</Box>
                 </Container>
                 <Container>
                   <Typography>
-                    <Typography sx={Typographystyles}>
-                      Total refund this Month
-                    </Typography>
+                    <BlockTotalSpan>Total refund this Month</BlockTotalSpan>
                     <Button size="small">view all details</Button>
                   </Typography>
                   <Box sx={refundStyle}>$23</Box>
@@ -160,7 +170,7 @@ const EarningDetails = () => {
           </React.Fragment>
         </Card>
       </Box>
-    </CustomBox>
+    </BlockTableDetails>
   );
 };
 

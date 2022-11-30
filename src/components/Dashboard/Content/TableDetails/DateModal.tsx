@@ -29,7 +29,7 @@ const DateModal = () => {
 
   return (
     <div>
-      <Button onClick={handleOpen}>Change date</Button>
+      <Button style={{marginRight: "10px"}} onClick={handleOpen}>Change date</Button>
       <Modal
         aria-labelledby="transition-modal-title"
         aria-describedby="transition-modal-description"
