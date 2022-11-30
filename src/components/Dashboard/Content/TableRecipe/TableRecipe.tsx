@@ -8,7 +8,7 @@ const BlockTableRecipe = styled("div")({
   border: "0.5px solid #153453",
   background: "#081A2C",
   margin: "17px 0px 0px 18px",
-  padding: "29px 28px 31px 28px",
+  padding: "25px",
   "@media (max-width:1900px)": {
     width: "19.5%",
     margin: "15px 0px 0px 14px",
@@ -27,14 +27,14 @@ const BlockName = styled("span")({
 const TableRecipeBlocks = styled("div")({
   display: "flex",
   justifyContent: "space-between",
-  marginTop: "28px",
-  marginBottom: "21px",
+  marginTop: "18px",
+  marginBottom: "18px",
 });
 
 const BlockDishes = styled("div")({
   textAlign: "center",
   width: "37%",
-  height: "136px",
+  height: "130px",
   background: "#061321",
   borderRadius: "10px",
   "@media (max-width:1900px)": {
@@ -44,8 +44,8 @@ const BlockDishes = styled("div")({
 });
 
 const BlockNumber = styled("div")({
-  marginTop: "24px",
-  marginBottom: "21px",
+  marginTop: "20px",
+  marginBottom: "20px",
   "@media (max-width:1900px)": {
     marginTop: "10px",
     marginBottom: "11px",
@@ -61,8 +61,8 @@ const BlockNumberSpan = styled("span")({
 });
 
 const TableRecipeBlockVeg = styled("div")({
-  marginTop: "24px",
-  marginBottom: "21px",
+  marginTop: "20px",
+  marginBottom: "20px",
 });
 
 const BlockVegSpan = styled("span")({
@@ -91,7 +91,7 @@ const BlockPopulars = styled("span")({
 });
 
 const PopularsBody = styled("div")({
-  marginTop: "28px",
+  marginTop: "18px",
   "@media (max-width:1900px)": {
     marginTop: "10px",
   },
@@ -152,8 +152,8 @@ const PopularsItemRightRating = styled("div")({
 });
 
 const TableRecipeLine = styled("div")({
-  marginTop: "19px",
-  marginBottom: "37px",
+  marginTop: "20px ",
+  marginBottom: "25px",
   width: "100%",
   border: "0.5px dashed #2A527A",
   "@media (max-width:1900px)": {
@@ -165,6 +165,7 @@ const TableRecipeLine = styled("div")({
 const TableRecipeLineView = styled("div")({
   display: "flex",
   justifyContent: "end",
+  marginTop: "20px",
 });
 
 const TableRecipeLineViewButton = styled("button")({
@@ -234,8 +235,7 @@ const TableRecipe = () => {
               <PopularsItemRightRating>{dish.rating}</PopularsItemRightRating>
             </PopularsItemRight>
           </PopularsItems>
-
-          <TableRecipeLine />
+          {dishes.length - 1 !== index && <TableRecipeLine />}
         </PopularsBody>
       ))}
 
