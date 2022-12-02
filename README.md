@@ -13,7 +13,6 @@
  - Формирование меню
  - Учет количества продукции
 
-
 ## Запуск проекта
 
 1. Клонируем проект ```git clone https://github.com/progitpro/platform-front.git```

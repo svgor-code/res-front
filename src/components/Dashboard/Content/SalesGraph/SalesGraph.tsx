@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { data } from "../SalesGraph/salesMockData";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
-import { styled } from "@mui/system";
 import {
   AreaChart,
   Area,
@@ -12,7 +11,7 @@ import {
   ResponsiveContainer,
   Legend,
 } from "recharts";
-import { Modal } from "./Modal";
+import { styled } from "@mui/system";
 
 const BlockSalesGraph = styled("div")({
   width: "31%",
@@ -20,55 +19,73 @@ const BlockSalesGraph = styled("div")({
   fontSize: "10px",
   border: "0.5px solid #153453",
   background: "#081A2C",
-  margin: "17px 0px 0px 18px",
+
+  margin: "17px 17px 0px 18px",
   "@media (max-width:1900px)": {
     margin: "15px 0px 0px 14px",
   },
 });
 
+const BlockMain = styled("div")({
+  padding: "19px 25px",
+  display: "flex",
+  justifyContent: "space-between",
+  alignContent: "center",
+  alignItems: "center",
+  flexWrap: "wrap",
+});
+
+const BlockMonth = styled("span")({
+  width: "147px",
+  fontWeight: "500",
+  fontSize: "18px",
+  lineHeight: "21px",
+  color: "#FFFFFF",
+});
+
+const BlockDateMain = styled("div")({
+  display: "flex",
+  flexWrap: "wrap",
+});
+
+const BlockCalIcon = styled("div")({
+  cursor: "pointer",
+  color: "#869AAF",
+});
+
+const BlockDate = styled("div")({
+  alignSelf: "center",
+  marginRight: "5px",
+  fontSize: "12px",
+  color: "#869AAF",
+});
+
+const BlockGraph = styled("div")({
+  paddingTop: "19px",
+});
+
 const SalesGraph = () => {
-  const [dataWindow, setDataWindow] = useState(false);
-  const handleChangeDate = (): void => {
+  const [dataWindow, setDataWindow] = useState<boolean>(false);
+  const handleOpenDateModal = (): void => {
     setDataWindow((prevState) => !prevState);
     console.log(dataWindow);
   };
 
   return (
     <BlockSalesGraph>
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          margin: "10px 25px",
-          alignContent: "center",
-          alignItems: "center",
-          flexWrap: "wrap",
-        }}
-      >
-        <div style={{ fontSize: "15px", color: "white", fontWeight: "bold" }}>
-          September 2020
-        </div>
-        <div style={{ display: "flex", flexWrap: "wrap" }}>
-          <div
-            style={{
-              alignSelf: "center",
-              marginRight: "5px",
-              fontSize: "12px",
-              color: "#869AAF",
-            }}
-          >
-            Change date
-          </div>
-          <CalendarTodayIcon
-            onClick={handleChangeDate}
-            style={{ cursor: "pointer", color: "#869AAF" }}
-          />
-        </div>
-      </div>
+      <BlockMain>
+        <BlockMonth>September 2020</BlockMonth>
+        <BlockDateMain>
+          <BlockDate>Change date</BlockDate>
+          <BlockCalIcon>
+            <CalendarTodayIcon onClick={handleOpenDateModal} />
+          </BlockCalIcon>
+        </BlockDateMain>
+      </BlockMain>
       <ResponsiveContainer width="100%" height="80%">
         <AreaChart
-          width={500}
-          height={400}
+          width={400}
+          height={300}
           data={data}
           margin={{
             top: 10,
@@ -97,7 +114,6 @@ const SalesGraph = () => {
           />
         </AreaChart>
       </ResponsiveContainer>
-      <Modal props={dataWindow} />
     </BlockSalesGraph>
   );
 };
