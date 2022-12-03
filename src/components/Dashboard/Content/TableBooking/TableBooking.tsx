@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import {styled} from "@mui/system";
 import TableBookingItem from './TableBookingItem';
 import Stack from '@mui/material/Stack';
@@ -13,6 +14,20 @@ const BlockTableBooking = styled('div')({
     "@media (max-width:1900px)":{
     margin: "15px 0px 0px 14px",
     }
+=======
+import React from "react";
+import { styled } from "@mui/system";
+
+const BlockTableBooking = styled("div")({
+  width: "25%",
+  borderRadius: "6px",
+  border: "0.5px solid #153453",
+  background: "#081A2C",
+  margin: "17px 0px 0px 18px",
+  "@media (max-width:1900px)": {
+    margin: "15px 0px 0px 14px",
+  },
+>>>>>>> c351ddb6137d6e0ed9d7a9fd5f2d86bcaae317d6
 });
 
 const BlockTableBookingTitle = styled('h2')({
@@ -25,6 +40,7 @@ const BlockTableBookingTitle = styled('h2')({
 
 
 const TableBooking = () => {
+<<<<<<< HEAD
     return (
         <BlockTableBooking>
             <BlockTableBookingTitle>Online Table Booking</BlockTableBookingTitle>
@@ -35,6 +51,9 @@ const TableBooking = () => {
             </Stack>
         </BlockTableBooking>
     );
+=======
+  return <BlockTableBooking></BlockTableBooking>;
+>>>>>>> c351ddb6137d6e0ed9d7a9fd5f2d86bcaae317d6
 };
 
 export default TableBooking;
