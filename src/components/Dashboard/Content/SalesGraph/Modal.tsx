@@ -1,24 +1,79 @@
-// const Modal = <T, K>(dataWindow: T, setDataWindow: K): any => {
-//   const handleClose = (): void => {
-//     setDataWindow(false);
-//   };
-//   if (dataWindow) {
-//     return (
-//       <>
-//         <div className="modal">
-//           <div className="modal-content">
-//             <h4 className="modal-header">Choose date</h4>
-//           </div>
-//         </div>
-//         <div className="modal-content">Content</div>
-//         <div className="modal-footer">
-//           <button>Done</button>
-//           <button onClick={handleClose}>Cancel</button>
-//         </div>
-//       </>
-//     );
-//   }
-//   return null;
-// };
-//
-// export { Modal };
+import { styled } from "@mui/system";
+
+const BlockModal = styled("div")({
+  position: "fixed",
+  display: "flex",
+  flexDirection: "column",
+  top: "50%",
+  left: "17%",
+  background: "#081A2C",
+  alignItems: "center",
+  width: "300px",
+  height: "200px",
+  justifyContent: "space-between",
+  borderRadius: "30px",
+  textAlign: "center",
+});
+const BlockModalHeader = styled("span")({
+  fontWeight: "500",
+  fontSize: "15px",
+  lineHeight: "21px",
+  color: "#FFFFFF",
+});
+
+const BlockModalContent = styled("div")({
+  width: "300px",
+  background: "#081A2C",
+});
+
+const BlockModalFooter = styled("div")({
+  width: "300px",
+  background: "#081A2C",
+  display: "flex",
+  justifyContent: "space-between",
+});
+
+const BlockModalLineViewButton = styled("button")({
+  width: "25.5%",
+  padding: "7px",
+  borderRadius: "5px",
+  background: "#073374",
+  color: "#FFFFFF",
+  cursor: "pointer",
+  border: "none",
+  margin: "10px 10px",
+});
+
+interface IModal {
+  dataWindow: boolean;
+  setDataWindow: (state: boolean) => void;
+}
+
+const Modal: React.FC<IModal> = (props) => {
+  const { dataWindow, setDataWindow } = props;
+  const handleClose: React.MouseEventHandler<HTMLButtonElement> = (): void => {
+    setDataWindow(false);
+  };
+  if (dataWindow) {
+    return (
+      <>
+        <BlockModal>
+          <BlockModalContent>
+            <BlockModalHeader>Choose date</BlockModalHeader>
+          </BlockModalContent>
+          <BlockModalFooter>
+            <BlockModalLineViewButton onClick={handleClose}>
+              Done
+            </BlockModalLineViewButton>
+            <BlockModalLineViewButton onClick={handleClose}>
+              Cancel
+            </BlockModalLineViewButton>
+          </BlockModalFooter>
+        </BlockModal>
+      </>
+    );
+  }
+  return null;
+};
+
+export { Modal };

@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { data } from "../SalesGraph/salesMockData";
+import { Modal } from "./Modal";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import {
   AreaChart,
@@ -60,13 +61,11 @@ const BlockDate = styled("div")({
   color: "#869AAF",
 });
 
-const BlockGraph = styled("div")({
-  paddingTop: "19px",
-});
-
 const SalesGraph = () => {
   const [dataWindow, setDataWindow] = useState<boolean>(false);
-  const handleOpenDateModal = (): void => {
+  const handleOpenDateModal: React.MouseEventHandler<
+    SVGSVGElement
+  > = (): void => {
     setDataWindow((prevState) => !prevState);
     console.log(dataWindow);
   };
@@ -114,6 +113,7 @@ const SalesGraph = () => {
           />
         </AreaChart>
       </ResponsiveContainer>
+      <Modal dataWindow={dataWindow} setDataWindow={setDataWindow} />
     </BlockSalesGraph>
   );
 };
