@@ -63,6 +63,7 @@ const BlockDate = styled("div")({
 
 const SalesGraph = () => {
   const [dataWindow, setDataWindow] = useState<boolean>(false);
+
   const handleOpenDateModal: React.MouseEventHandler<
     SVGSVGElement
   > = (): void => {

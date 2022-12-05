@@ -56,6 +56,7 @@ export const SalesGraphModal = (props: Props) => {
   const handleClose: React.MouseEventHandler<HTMLButtonElement> = (): void => {
     setDataWindow(false);
   };
+
   if (!dataWindow) {
     return null;
   }
