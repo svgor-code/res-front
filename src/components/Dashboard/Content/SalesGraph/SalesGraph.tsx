@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { data } from "../SalesGraph/salesMockData";
-import { Modal } from "./Modal";
+import { SalesGraphModal } from "./Modal";
 import CalendarTodayIcon from "@mui/icons-material/CalendarToday";
 import {
   AreaChart,
@@ -113,7 +113,7 @@ const SalesGraph = () => {
           />
         </AreaChart>
       </ResponsiveContainer>
-      <Modal dataWindow={dataWindow} setDataWindow={setDataWindow} />
+      <SalesGraphModal dataWindow={dataWindow} setDataWindow={setDataWindow} />
     </BlockSalesGraph>
   );
 };

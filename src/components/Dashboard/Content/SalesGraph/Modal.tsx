@@ -1,9 +1,9 @@
 import { styled } from "@mui/system";
 
 const BlockModal = styled("div")({
-  position: "fixed",
   display: "flex",
   flexDirection: "column",
+  position: 'fixed',
   top: "50%",
   left: "17%",
   background: "#081A2C",
@@ -14,6 +14,7 @@ const BlockModal = styled("div")({
   borderRadius: "30px",
   textAlign: "center",
 });
+
 const BlockModalHeader = styled("span")({
   fontWeight: "500",
   fontSize: "15px",
@@ -44,36 +45,35 @@ const BlockModalLineViewButton = styled("button")({
   margin: "10px 10px",
 });
 
-interface IModal {
+type Props = {
   dataWindow: boolean;
   setDataWindow: (state: boolean) => void;
-}
+};
 
-const Modal: React.FC<IModal> = (props) => {
+export const SalesGraphModal = (props: Props) => {
   const { dataWindow, setDataWindow } = props;
+
   const handleClose: React.MouseEventHandler<HTMLButtonElement> = (): void => {
     setDataWindow(false);
   };
-  if (dataWindow) {
-    return (
-      <>
-        <BlockModal>
-          <BlockModalContent>
-            <BlockModalHeader>Choose date</BlockModalHeader>
-          </BlockModalContent>
-          <BlockModalFooter>
-            <BlockModalLineViewButton onClick={handleClose}>
-              Done
-            </BlockModalLineViewButton>
-            <BlockModalLineViewButton onClick={handleClose}>
-              Cancel
-            </BlockModalLineViewButton>
-          </BlockModalFooter>
-        </BlockModal>
-      </>
-    );
+  if (!dataWindow) {
+    return null;
   }
-  return null;
+  return (
+    <>
+      <BlockModal>
+        <BlockModalContent>
+          <BlockModalHeader>Choose date</BlockModalHeader>
+        </BlockModalContent>
+        <BlockModalFooter>
+          <BlockModalLineViewButton onClick={handleClose}>
+            Done
+          </BlockModalLineViewButton>
+          <BlockModalLineViewButton onClick={handleClose}>
+            Cancel
+          </BlockModalLineViewButton>
+        </BlockModalFooter>
+      </BlockModal>
+    </>
+  );
 };
-
-export { Modal };
