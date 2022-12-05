@@ -18,38 +18,34 @@ const BlockLiveKitchen = styled("div")({
 	},
 });
 
-// хорощо бы вынести в общий файл для всех
-const BlockName = styled("h2")({
+// хорошо бы вынести в общий файл для всех
+const NameDashboardItem = styled("h2")({
 	fontWeight: "500",
 	fontSize: "18px",
 	color: "#FFFFFF",
 	marginBottom: "20px",
 });
 
-const BlockCameras = styled("div")({
+const Cameras = styled("div")({
 	display: "flex",
 });
 
-const BlockVideo = styled("div")({
+const VideoFromCameraImage = styled("img")({
 	marginRight: "18px",
 });
 
-const Video = styled("img")({});
-
-const BlockWorkingCameras = styled("div")({
-	// border: "1px solid #fff",
+const DisplayOfWorkingCameras = styled("div")({
 	display: "grid",
 	gridTemplateColumns: "50px 75px",
-
 	alignItems: "center",
 });
 
-const Camera = styled("img")({
+const CameraImage = styled("img")({
 	width: "41px",
 	height: "31px",
 });
 
-const Live = styled("div")({
+const WorkingCamerasBadge = styled("div")({
 	width: "44px",
 	height: "18px",
 	fontWeight: "700",
@@ -77,7 +73,7 @@ const NumberOfWorkingCameras = styled("div")({
 	marginLeft: "2px",
 });
 
-const NameBlockCameras = styled("h2")({
+const WorkingCamerasTitle = styled("h2")({
 	width: "73px",
 	height: "30px",
 	fontWeight: "400",
@@ -86,31 +82,31 @@ const NameBlockCameras = styled("h2")({
 	color: "#7E89A8",
 });
 
-const BlockShefs = styled("div")({
+const DisplayOfWorkingChefs = styled("div")({
 	display: "flex",
 	justifyContent: "space-between",
+	"@media (max-width:1900px)": {
+		justifyContent: "space-evenly",
+	},
 });
 
 const LiveKitchen: FC = () => {
 	return (
 		<BlockLiveKitchen>
-			<BlockName>Live Kitchen</BlockName>
-			<BlockCameras>
-				<BlockVideo>
-					<Video src={videoLiveKitchen} alt="videoLiveKitchen" />
-				</BlockVideo>
-				<BlockWorkingCameras>
-					<Camera src={camera} alt="camera" />
-					<Live>Live</Live>
+			<NameDashboardItem>Live Kitchen</NameDashboardItem>
+			<Cameras>
+				<VideoFromCameraImage src={videoLiveKitchen} alt="videoLiveKitchen" />
+				<DisplayOfWorkingCameras>
+					<CameraImage src={camera} alt="camera" />
+					<WorkingCamerasBadge>Live</WorkingCamerasBadge>
 					<NumberOfWorkingCameras>02</NumberOfWorkingCameras>
-					<NameBlockCameras>Cameras are working</NameBlockCameras>
-				</BlockWorkingCameras>
-			</BlockCameras>
-			<BlockShefs>
-				{" "}
+					<WorkingCamerasTitle>Cameras are working</WorkingCamerasTitle>
+				</DisplayOfWorkingCameras>
+			</Cameras>
+			<DisplayOfWorkingChefs>
 				<WorkingСhefs />
 				<WorkingСhefs />
-			</BlockShefs>
+			</DisplayOfWorkingChefs>
 		</BlockLiveKitchen>
 	);
 };
