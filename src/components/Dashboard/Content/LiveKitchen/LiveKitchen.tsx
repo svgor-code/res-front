@@ -3,10 +3,10 @@ import { styled } from "@mui/system";
 import videoLiveKitchen from "src/images/svg/videoLiveKitchen.svg";
 import camera from "src/images/svg/camera.svg";
 import WorkingСhefs from "./WorkingChefs";
+import { NameDashboardItem } from "src/components/styledComponents";
 
 const BlockLiveKitchen = styled("div")({
-  boxSizing: "border-box",
-  width: "23%",
+  width: "21%",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
@@ -16,14 +16,6 @@ const BlockLiveKitchen = styled("div")({
     width: "24%",
     margin: "15px 0px 0px 14px",
   },
-});
-
-// Хорошо бы вынести в отдельный общий файл для всех блоков
-const NameDashboardItem = styled("h2")({
-  fontWeight: "500",
-  fontSize: "18px",
-  color: "#FFFFFF",
-  marginBottom: "20px",
 });
 
 const Cameras = styled("div")({

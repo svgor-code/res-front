@@ -1,27 +1,20 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
 import ratingImg from "src/images/svg/rating.svg";
+import { NameDashboardItem } from "src/components/styledComponents";
 
 const BlockTableRecipe = styled("div")({
-  width: "19.2%",
+  width: "17%",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
   margin: "17px 0px 0px 18px",
-  padding: "25px",
+  padding: "10px  25px",
   "@media (max-width:1900px)": {
     width: "19.5%",
     margin: "15px 0px 0px 14px",
     padding: "19px 19px",
   },
-});
-
-const BlockName = styled("span")({
-  width: "147px",
-  fontWeight: "500",
-  fontSize: "18px",
-  lineHeight: "21px",
-  color: "#FFFFFF",
 });
 
 const TableRecipeBlocks = styled("div")({
@@ -191,7 +184,7 @@ const TableRecipe = () => {
 
   return (
     <BlockTableRecipe>
-      <BlockName>Todays Recipe/Dish</BlockName>
+      <NameDashboardItem>Todays Recipe/Dish</NameDashboardItem>
 
       <TableRecipeBlocks>
         <BlockDishes>
