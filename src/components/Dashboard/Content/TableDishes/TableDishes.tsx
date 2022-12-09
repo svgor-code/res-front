@@ -15,10 +15,31 @@ const BlockTableDishes = styled("div")({
   },
 });
 
+const NonVegDishes = styled("div")({
+  width: "150px",
+  borderRadius: "10px",
+  background: "#061321",
+});
+
+const NumberOfDishes = styled("h2")({
+  fontWeight: "500",
+  fontSize: "32px",
+  color: "#06CB55",
+});
+
+const DishesTitle = styled("h2")({
+  fontWeight: "500",
+  fontSize: "32px",
+  color: "#06CB55",
+});
+
 const TableDishes = () => {
   return (
     <BlockTableDishes>
       <NameDashboardItem>Today’s Offered Dishes</NameDashboardItem>
+      <NonVegDishes>
+        <NumberOfDishes>12</NumberOfDishes>
+      </NonVegDishes>
     </BlockTableDishes>
   );
 };

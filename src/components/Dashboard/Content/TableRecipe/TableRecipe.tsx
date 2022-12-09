@@ -27,7 +27,7 @@ const TableRecipeBlocks = styled("div")({
 const BlockDishes = styled("div")({
   textAlign: "center",
   width: "37%",
-  height: "130px",
+  height: "110px",
   background: "#061321",
   borderRadius: "10px",
   "@media (max-width:1900px)": {
@@ -145,7 +145,7 @@ const PopularsItemRightRating = styled("div")({
 });
 
 const TableRecipeLine = styled("div")({
-  marginTop: "20px ",
+  marginTop: "15px ",
   marginBottom: "25px",
   width: "100%",
   border: "0.5px dashed #2A527A",
@@ -158,7 +158,7 @@ const TableRecipeLine = styled("div")({
 const TableRecipeLineView = styled("div")({
   display: "flex",
   justifyContent: "end",
-  marginTop: "20px",
+  marginTop: "15px",
 });
 
 const TableRecipeLineViewButton = styled("button")({
