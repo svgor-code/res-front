@@ -21,7 +21,7 @@ export const BlockName = styled("span")({
   fontWeight: "500",
   fontSize: "18px",
   lineHeight: "21px",
-  color: "#FFFFFF"
+  color: "#FFFFFF",
 });
 
 const TableRecipeBlocks = styled("div")({
@@ -40,7 +40,7 @@ const BlockDishes = styled("div")({
   "@media (max-width:1900px)": {
     width: "44%",
     height: "100px",
-  }
+  },
 });
 
 const BlockNumber = styled("div")({
@@ -180,10 +180,10 @@ const TableRecipeLineViewButton = styled("button")({
 
 const TableRecipe = () => {
   const dishes = [
-    {number: "01", name: "Caper and chickpea pasta", rating: "4.5"},
-    {number: "02", name: "Fish and pasta casserole", rating: "4.5"},
-    {number: "03", name: "Squash and coconut bread", rating: "4.5"},
-    {number: "04", name: "Squash and coconut bread", rating: "4.5"},
+    { number: "01", name: "Caper and chickpea pasta", rating: "4.5" },
+    { number: "02", name: "Fish and pasta casserole", rating: "4.5" },
+    { number: "03", name: "Squash and coconut bread", rating: "4.5" },
+    { number: "04", name: "Squash and coconut bread", rating: "4.5" },
   ];
 
   const [veg, setVeg] = useState<string>("35");
@@ -229,13 +229,13 @@ const TableRecipe = () => {
 
             <PopularsItemRight>
               <PopularsItemRightImg>
-                <PopularsItemRightRatingImg src={ratingImg} alt="rating"/>
+                <PopularsItemRightRatingImg src={ratingImg} alt="rating" />
               </PopularsItemRightImg>
 
               <PopularsItemRightRating>{dish.rating}</PopularsItemRightRating>
             </PopularsItemRight>
           </PopularsItems>
-          {dishes.length - 1 !== index && <TableRecipeLine/>}
+          {dishes.length - 1 !== index && <TableRecipeLine />}
         </PopularsBody>
       ))}
 

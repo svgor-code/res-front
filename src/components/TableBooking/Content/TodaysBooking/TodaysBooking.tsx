@@ -1,9 +1,9 @@
-import React from 'react';
+import React from "react";
 import { styled } from "@mui/system";
 import { BlockName } from "src/components/Dashboard/Content/TableRecipe/TableRecipe";
 
 const BlockTodaysBooking = styled("div")({
-  paddingTop: "27px"
+  paddingTop: "27px",
 });
 
 const BlockTodaysBookingBody = styled("div")({
@@ -12,7 +12,7 @@ const BlockTodaysBookingBody = styled("div")({
   height: "83px",
   "@media (max-width:1900px)": {
     marginTop: "30px",
-  }
+  },
 });
 
 const ReservedTableBlock = styled("div")({
@@ -23,15 +23,14 @@ const ReservedTableBlock = styled("div")({
   marginRight: "50px",
   "@media (max-width:1900px)": {
     marginRight: "25px",
-  }
+  },
 });
-
 
 const FreeSlots = styled("div")({
   width: "467px",
   background: "#081A2C",
   border: "0.5px solid #153453",
-  borderRadius: "6px"
+  borderRadius: "6px",
 });
 
 const TodaysBooking = () => {
@@ -39,10 +38,8 @@ const TodaysBooking = () => {
     <BlockTodaysBooking>
       <BlockName>Today’s Booking</BlockName>
       <BlockTodaysBookingBody>
-
-        <ReservedTableBlock/>
-        <FreeSlots/>
-
+        <ReservedTableBlock />
+        <FreeSlots />
       </BlockTodaysBookingBody>
     </BlockTodaysBooking>
   );
