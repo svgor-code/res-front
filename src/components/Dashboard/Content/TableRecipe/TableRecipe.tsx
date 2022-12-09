@@ -1,10 +1,14 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
 import ratingImg from "src/images/svg/rating.svg";
-import { NameDashboardItem } from "src/components/styledComponents";
+import {
+  DashedLine,
+  NameDashboardItem,
+  ViewButton,
+} from "src/components/styledComponents";
 
 const BlockTableRecipe = styled("div")({
-  width: "17%",
+  width: "19%",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
@@ -144,31 +148,10 @@ const PopularsItemRightRating = styled("div")({
   color: "#7E89A8",
 });
 
-const TableRecipeLine = styled("div")({
-  marginTop: "15px ",
-  marginBottom: "25px",
-  width: "100%",
-  border: "0.5px dashed #2A527A",
-  "@media (max-width:1900px)": {
-    marginTop: "14px",
-    marginBottom: "14px",
-  },
-});
-
 const TableRecipeLineView = styled("div")({
   display: "flex",
   justifyContent: "end",
-  marginTop: "15px",
-});
-
-const TableRecipeLineViewButton = styled("button")({
-  width: "36.5%",
-  padding: "7px",
-  borderRadius: "5px",
-  background: "#073374",
-  color: "#FFFFFF",
-  cursor: "pointer",
-  border: "none",
+  marginTop: "25px",
 });
 
 const TableRecipe = () => {
@@ -228,12 +211,12 @@ const TableRecipe = () => {
               <PopularsItemRightRating>{dish.rating}</PopularsItemRightRating>
             </PopularsItemRight>
           </PopularsItems>
-          {dishes.length - 1 !== index && <TableRecipeLine />}
+          {dishes.length - 1 !== index && <DashedLine />}
         </PopularsBody>
       ))}
 
       <TableRecipeLineView>
-        <TableRecipeLineViewButton>View All</TableRecipeLineViewButton>
+        <ViewButton>View All</ViewButton>
       </TableRecipeLineView>
     </BlockTableRecipe>
   );

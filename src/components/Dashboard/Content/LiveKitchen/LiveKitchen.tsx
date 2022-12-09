@@ -6,7 +6,7 @@ import WorkingСhefs from "./WorkingChefs";
 import { NameDashboardItem } from "src/components/styledComponents";
 
 const BlockLiveKitchen = styled("div")({
-  width: "21%",
+  width: "20%",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",

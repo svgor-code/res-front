@@ -23,7 +23,7 @@ interface SidebarInterface {
 const MenuList = (
   icon: ReactElement,
   text: string,
-  path: string
+  path: string,
 ): SidebarInterface => {
   return {
     icon,
