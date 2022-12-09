@@ -16,7 +16,7 @@ const BlockTableRecipe = styled("div")({
   },
 });
 
-const BlockName = styled("span")({
+export const BlockName = styled("span")({
   width: "147px",
   fontWeight: "500",
   fontSize: "18px",
