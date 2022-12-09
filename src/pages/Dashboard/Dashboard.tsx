@@ -38,18 +38,18 @@ const Dashboard = () => {
     <ContainerDashboard>
       <DashboardGrid>
         <DashboardUpBlock>
-          <NewOrders/>
-          <ProcessOrders/>
-          <DeliveredOrders/>
-          <TableBooking/>
-          <LiveKitchen/>
+          <NewOrders />
+          <ProcessOrders />
+          <DeliveredOrders />
+          <TableBooking />
+          <LiveKitchen />
         </DashboardUpBlock>
 
         <DashboardDownBlock>
-          <SalesGraph/>
-          <TableDetails/>
-          <TableRecipe/>
-          <TableDishes/>
+          <SalesGraph />
+          <TableDetails />
+          <TableRecipe />
+          <TableDishes />
         </DashboardDownBlock>
       </DashboardGrid>
     </ContainerDashboard>
