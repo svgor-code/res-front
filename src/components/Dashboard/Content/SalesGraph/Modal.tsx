@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 const BlockModal = styled("div")({
   display: "flex",
   flexDirection: "column",
-  position: 'fixed',
+  position: "fixed",
   top: "50%",
   left: "17%",
   background: "#081A2C",

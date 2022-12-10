@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
-import notifaction from "src/images/svg/notifaction.svg"
+import notifaction from "src/images/svg/notifaction.svg";
 
 const BlockNewOrders = styled("div")({
   width: "15%",
@@ -10,7 +10,7 @@ const BlockNewOrders = styled("div")({
   margin: "17px 0px 0px 18px",
   "@media (max-width:1900px)": {
     margin: "15px 0px 0px 14px",
-  }
+  },
 });
 
 const NewOrdersTable = styled("div")({
@@ -25,8 +25,8 @@ const NewOrdersTable = styled("div")({
   marginTop: "10px",
   "@media (max-width:1900px)": {
     margin: "0 auto",
-    marginTop: "10px"
-  }
+    marginTop: "10px",
+  },
 });
 
 const NewOrdersInfo = styled("div")({
@@ -34,7 +34,7 @@ const NewOrdersInfo = styled("div")({
   justifyContent: "space-around",
   width: "122%",
   marginLeft: "-18px",
-  marginTop: "9px"
+  marginTop: "9px",
 });
 
 const NewOrdersInfoSpan = styled("div")({});
@@ -58,7 +58,7 @@ const NewOrdersInfoImg = styled("span")({
 const NewOrdersInfoPhoto = styled("img")({});
 
 const NewOrdersNumber = styled("div")({
-  marginBottom: "10.3px"
+  marginBottom: "10.3px",
 });
 
 const NewOrdersNumberSpan = styled("span")({
@@ -67,7 +67,7 @@ const NewOrdersNumberSpan = styled("span")({
   fontSize: "80px",
   lineHeight: "94px",
   letterSpacing: "-0.05em",
-  color: "#FFFFFF"
+  color: "#FFFFFF",
 });
 
 const NewOrdersDescr = styled("div")({
@@ -83,13 +83,13 @@ const NewOrdersDescrSpan = styled("span")({
   fontSize: "11px",
   lineHeight: "13px",
   textAlign: "center",
-  color: "#7E89A8"
+  color: "#7E89A8",
 });
 
 export const ViewAll = styled("div")({
   display: "flex",
   justifyContent: "center",
-  marginTop: "30px"
+  marginTop: "30px",
 });
 
 export const ViewButton = styled("button")({
@@ -102,42 +102,38 @@ export const ViewButton = styled("button")({
   border: "none",
   "&:hover": {
     transition: "all .3s",
-    backgroundColor: "#082350"
-  }
+    backgroundColor: "#082350",
+  },
 });
 
 const NewOrders = () => {
-  const [number, setNumber] = useState<string>("25")
+  const [number, setNumber] = useState<string>("25");
   return (
-      <BlockNewOrders>
-        <NewOrdersTable>
-          <NewOrdersInfo>
-            <NewOrdersInfoSpan>
-              <NewOrdersSpan>
-                New Orders
-              </NewOrdersSpan>
-            </NewOrdersInfoSpan>
-            <NewOrdersInfoImg>
-              <NewOrdersInfoPhoto src={notifaction} alt="notifaction"/>
-            </NewOrdersInfoImg>
-          </NewOrdersInfo>
-          <NewOrdersNumber>
-            <NewOrdersNumberSpan>
-              {number}
-            </NewOrdersNumberSpan>
-          </NewOrdersNumber>
-        </NewOrdersTable>
+    <BlockNewOrders>
+      <NewOrdersTable>
+        <NewOrdersInfo>
+          <NewOrdersInfoSpan>
+            <NewOrdersSpan>New Orders</NewOrdersSpan>
+          </NewOrdersInfoSpan>
+          <NewOrdersInfoImg>
+            <NewOrdersInfoPhoto src={notifaction} alt="notifaction" />
+          </NewOrdersInfoImg>
+        </NewOrdersInfo>
+        <NewOrdersNumber>
+          <NewOrdersNumberSpan>{number}</NewOrdersNumberSpan>
+        </NewOrdersNumber>
+      </NewOrdersTable>
 
-        <NewOrdersDescr>
-          <NewOrdersDescrSpan>
-            All online incoming orders through app and website
-          </NewOrdersDescrSpan>
-        </NewOrdersDescr>
+      <NewOrdersDescr>
+        <NewOrdersDescrSpan>
+          All online incoming orders through app and website
+        </NewOrdersDescrSpan>
+      </NewOrdersDescr>
 
-        <ViewAll>
-          <ViewButton>View All</ViewButton>
-        </ViewAll>
-      </BlockNewOrders>
+      <ViewAll>
+        <ViewButton>View All</ViewButton>
+      </ViewAll>
+    </BlockNewOrders>
   );
 };
 
