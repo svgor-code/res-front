@@ -8,7 +8,6 @@ type Props = {
 
 const NumberOfDishes = ({ amount, type }: Props) => {
   const Dishes = styled("div")({
-    margin: "5px",
     width: "160px",
     height: "70px",
     borderRadius: "5px",
@@ -19,6 +18,10 @@ const NumberOfDishes = ({ amount, type }: Props) => {
       type === "Non-Veg Dishes"
         ? "rgba(0, 242, 82, 0.16)"
         : "rgba(27, 90, 255, 0.16)",
+
+    "@media (max-width:1900px)": {
+      margin: "5px",
+    },
   });
 
   const NumberOfDishes = styled("h2")({

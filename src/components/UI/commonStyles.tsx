@@ -15,11 +15,15 @@ export const DashedLine = styled("div")({
 });
 
 export const ViewButton = styled("button")({
-  width: "36.5%",
-  padding: "7px",
+  width: "98px",
+  height: "30px",
   borderRadius: "5px",
   background: "#073374",
   color: "#FFFFFF",
   cursor: "pointer",
   border: "none",
+  "&:hover": {
+    transition: "all .3s",
+    backgroundColor: "#082350",
+  },
 });

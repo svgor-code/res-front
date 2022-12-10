@@ -3,7 +3,7 @@ import { styled } from "@mui/system";
 import videoLiveKitchen from "src/images/svg/videoLiveKitchen.svg";
 import camera from "src/images/svg/camera.svg";
 import WorkingСhefs from "./WorkingChefs";
-import { NameDashboardItem } from "src/components/styledComponents";
+import { NameDashboardItem } from "src/components/UI/commonStyles";
 
 const BlockLiveKitchen = styled("div")({
   width: "20%",

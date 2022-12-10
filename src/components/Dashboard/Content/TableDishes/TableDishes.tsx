@@ -4,7 +4,7 @@ import {
   DashedLine,
   NameDashboardItem,
   ViewButton,
-} from "src/components/styledComponents";
+} from "src/components/UI/commonStyles";
 import NumberOfDishes from "./NumberOfDishes";
 import lentilSoup from "src/images/svg/lentilSoup.svg";
 import caperAndChickpeaPasta from "src/images/svg/caperAndChickpeaPasta.svg";
