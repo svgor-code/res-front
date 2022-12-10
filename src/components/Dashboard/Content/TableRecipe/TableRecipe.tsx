@@ -21,6 +21,17 @@ const BlockTableRecipe = styled("div")({
   },
 });
 
+<<<<<<< HEAD
+=======
+export const BlockName = styled("span")({
+  width: "147px",
+  fontWeight: "500",
+  fontSize: "18px",
+  lineHeight: "21px",
+  color: "#FFFFFF",
+});
+
+>>>>>>> 86bec1b9fefedd02b5757ce5e65c99cdf7b30897
 const TableRecipeBlocks = styled("div")({
   display: "flex",
   justifyContent: "space-between",
