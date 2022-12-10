@@ -4,6 +4,7 @@ import { ViewAll, ViewButton } from "../NewOrders/NewOrders";
 
 const BlockDeliveredOrders = styled("div")({
   width: "15%",
+  height: "285px",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
@@ -41,8 +42,7 @@ const DeliveredOrdersBody = styled("div")({
   height: "35px",
   margin: "0 auto",
   marginTop: "17px",
-  background: "#14CC74",
-  opacity: "0.2",
+  background: "rgba(20, 204, 116, 0.2)",
   borderRadius: "6px",
 });
 
