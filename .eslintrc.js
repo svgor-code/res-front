@@ -21,10 +21,6 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
-<<<<<<< HEAD
     "prettier/prettier": ["error", { endOfLine: "auto" }],
-=======
-    "prettier/prettier": ["error", { endOfLine: "auto" }]
->>>>>>> e3a4a4c710120893ed6d3e7f6e286175e751081a
   },
 };
