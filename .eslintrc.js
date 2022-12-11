@@ -22,5 +22,6 @@ module.exports = {
     "@typescript-eslint/explicit-module-boundary-types": "off",
     "@typescript-eslint/no-explicit-any": "off",
     "prettier/prettier": ["error", { endOfLine: "auto" }],
+    "*eslint no-unsafe-finally": "error",
   },
 };
