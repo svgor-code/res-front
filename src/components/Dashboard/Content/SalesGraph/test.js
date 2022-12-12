@@ -1,23 +1,3 @@
-let foo = function () {
-  try {
-    return 1;
-  } catch (err) {
-    return 2;
-  } finally {
-    return 3;
-  }
-};
-
-let foo2 = function () {
-  try {
+const testString = 'retry';
 
 
-    return 1;
-
-
-  } catch (err) {
-    return 2;
-  } finally {
-    return 3;
-  }
-};
