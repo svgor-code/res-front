@@ -27,6 +27,7 @@ const OrdersFirstColumn = styled("div")({
     marginRight: "10px",
   },
 });
+
 const OrdersSecondColumn = styled("div")({
   width: "26.5%",
   marginRight: "13px",
@@ -34,6 +35,7 @@ const OrdersSecondColumn = styled("div")({
     marginRight: "10px",
   },
 });
+
 const OrdersThreeColumn = styled("div")({
   width: "26.5%",
   marginRight: "13px",
@@ -41,6 +43,7 @@ const OrdersThreeColumn = styled("div")({
     marginRight: "10px",
   },
 });
+
 const OrdersFourColumn = styled("div")({
   width: "26.5%",
   display: "grid",
@@ -77,4 +80,5 @@ const Orders = () => {
     </AllOrdersContainer>
   );
 };
+
 export default Orders;

@@ -10,6 +10,7 @@ const OrderStatsBlock = styled("div")({
     height: "400px",
   },
 });
+
 const OrderStats = () => {
   return <OrderStatsBlock></OrderStatsBlock>;
 };

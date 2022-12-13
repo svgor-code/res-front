@@ -10,6 +10,7 @@ const InProcessInfoBlock = styled("div")({
     height: "829px",
   },
 });
+
 const InProcessInfo = () => {
   return <InProcessInfoBlock></InProcessInfoBlock>;
 };

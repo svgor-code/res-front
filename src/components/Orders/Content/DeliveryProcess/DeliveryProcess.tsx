@@ -7,6 +7,7 @@ const DeliveryProcessBlock = styled("div")({
   border: "0.5px solid #153453",
   background: "#081A2C",
 });
+
 const DeliveryProcess = () => {
   return <DeliveryProcessBlock></DeliveryProcessBlock>;
 };

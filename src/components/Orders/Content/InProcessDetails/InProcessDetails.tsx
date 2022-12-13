@@ -11,6 +11,7 @@ const InProcessDetailsBlock = styled("div")({
     height: "730px",
   },
 });
+
 const InProcessDetails = () => {
   return <InProcessDetailsBlock></InProcessDetailsBlock>;
 };
