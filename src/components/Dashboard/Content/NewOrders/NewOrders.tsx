@@ -108,7 +108,6 @@ export const ViewButton = styled("button")({
 
 const NewOrders = () => {
   const [number, setNumber] = useState<string>("25");
-
   return (
     <BlockNewOrders>
       <NewOrdersTable>
