@@ -27,3 +27,9 @@ export const ViewButton = styled("button")({
     backgroundColor: "#082350",
   },
 });
+
+export const ViewAll = styled("div")({
+  display: "flex",
+  justifyContent: "center",
+  marginTop: "30px",
+});

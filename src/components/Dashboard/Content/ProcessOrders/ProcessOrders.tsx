@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
-import { ViewAll } from "../NewOrders/NewOrders";
-import { ViewButton } from "src/components/UI/commonStyles";
+import { ViewAll, ViewButton } from "src/components/UI/commonStyles";
 
 const BlockProcessOrders = styled("div")({
   width: "15%",
