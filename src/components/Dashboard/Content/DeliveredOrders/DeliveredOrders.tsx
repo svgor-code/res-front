@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
-import { ViewAll, ViewButton } from "../NewOrders/NewOrders";
+import { ViewAll, ViewButton } from "src/components/UI/commonStyles";
 
 const BlockDeliveredOrders = styled("div")({
   width: "15%",

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
 import notifaction from "src/images/svg/notifaction.svg";
+import { ViewAll, ViewButton } from "src/components/UI/commonStyles";
 
 const BlockNewOrders = styled("div")({
   width: "15%",
@@ -84,26 +85,6 @@ const NewOrdersDescrSpan = styled("span")({
   lineHeight: "13px",
   textAlign: "center",
   color: "#7E89A8",
-});
-
-export const ViewAll = styled("div")({
-  display: "flex",
-  justifyContent: "center",
-  marginTop: "30px",
-});
-
-export const ViewButton = styled("button")({
-  width: "98px",
-  height: "30px",
-  borderRadius: "5px",
-  background: "#073374",
-  color: "#FFFFFF",
-  cursor: "pointer",
-  border: "none",
-  "&:hover": {
-    transition: "all .3s",
-    backgroundColor: "#082350",
-  },
 });
 
 const NewOrders = () => {
