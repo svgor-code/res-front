@@ -12,17 +12,16 @@ import TableRecipe from "src/components/Dashboard/Content/TableRecipe/TableRecip
 import TableDishes from "src/components/Dashboard/Content/TableDishes/TableDishes";
 
 const ContainerDashboard = styled("div")({
-  minHeight: "calc(100vh - 64px)",
+  width: "100%",
+  height: "93%",
   backgroundColor: "#030f1c",
 });
 
-const DashboardGrid = styled("div")({
-  marginLeft: "184px",
-});
+const DashboardGrid = styled("div")({});
 
 const DashboardUpBlock = styled("div")({
   display: "flex",
-  height: "300px",
+  height: "290px",
 });
 
 const DashboardDownBlock = styled("div")({

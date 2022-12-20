@@ -8,8 +8,6 @@ import Avatar from "@mui/material/Avatar";
 import ListItem from "@mui/material/ListItem";
 import { Typography } from "@mui/material";
 
-import PageSidebar from "src/components/PageSidebar/PageSidebar";
-
 type Props = {
   name: string;
 };
@@ -49,7 +47,6 @@ const PageHeader = ({ name }: Props) => {
     <CustomAppBar position="static">
       <AppBar position="static">
         <Container maxWidth="xl">
-          <PageSidebar />
           <Typography>Hello, {name}, Welcome to Spoon</Typography>
           <Toolbar disableGutters>
             <Box sx={styles}>/menu and date picker/</Box>

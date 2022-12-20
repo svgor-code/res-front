@@ -18,14 +18,10 @@ import { sidebarArray } from "./SidebarInterface";
 const CustomDrawer = styled(Drawer)({
   "& .MuiPaper-root": {
     backgroundColor: "#01070E",
-    overflowX: "hidden",
-    position: "fixed",
-    zIndex: 1,
   },
   "& .MuiBox-root": {
     backgroundColor: "#051424",
     color: "#869AAF",
-    overflowX: "hidden",
     "&:hover": {
       color: "#FFFFFF",
     },
@@ -67,7 +63,16 @@ const PageSideBar = () => {
       {(["left"] as const).map((anchor) => (
         <React.Fragment key={anchor}>
           <CustomDrawer variant="persistent" anchor={anchor} open={true}>
-            <CustomBox sx={{ width: 170, paddingTop: 2 }} role="presentation">
+            <CustomBox
+              sx={{
+                width: 170,
+                paddingTop: 2,
+                "@media (max-width:1100px)": {
+                  width: 50,
+                },
+              }}
+              role="presentation"
+            >
               <ListItemIcon
                 sx={{
                   display: "flex",
