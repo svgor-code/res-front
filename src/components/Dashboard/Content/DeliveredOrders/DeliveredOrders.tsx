@@ -4,7 +4,6 @@ import { ViewAll, ViewButton } from "src/components/UI/commonStyles";
 
 const BlockDeliveredOrders = styled("div")({
   width: "15%",
-  height: "285px",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
