@@ -7,6 +7,9 @@ const NormalSidebar = styled("div")({
   width: "10%",
   height: "100%",
   borderRight: "2px solid #030f1c",
+  "@media (max-width:1700px)": {
+    width: "6%",
+  },
 });
 const Sidebar = () => {
   return (

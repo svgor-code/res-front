@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 const NavigateList = styled("div")({
   display: "flex",
   flexDirection: "column",
-  justifyContent: "space-evenly",
   alignItems: "center",
   width: "100%",
   height: "55%",
@@ -16,7 +15,7 @@ const NavigateList = styled("div")({
 });
 
 const LogoImage = styled("img")({
-  margin: "50% 0 30%",
+  margin: "10% 0 30%",
 });
 
 const List = styled("div")({
@@ -49,12 +48,16 @@ const ItemIcon = styled("span")({
   "&:hover": {
     fill: "#FFFFFF",
   },
+  "@media (max-width:1700px)": {},
 });
 
 const ItemText = styled("span")({
   width: "70%",
   display: "flex",
   justifyContent: "start",
+  "@media (max-width:1700px)": {
+    display: "none",
+  },
 });
 
 const TopSidebar = () => {
@@ -63,8 +66,12 @@ const TopSidebar = () => {
       <LogoImage src={logo} alt="camera" />
       <List>
         {sidebarArray.map((item) => (
-          <Link style={{ textDecoration: "none" }} to={item.path}>
-            <ListItem key={item.text}>
+          <Link
+            key={item.text}
+            style={{ textDecoration: "none" }}
+            to={item.path}
+          >
+            <ListItem>
               <ItemIcon>{item.icon}</ItemIcon>
               <ItemText> {item.text}</ItemText>
             </ListItem>

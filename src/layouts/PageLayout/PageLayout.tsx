@@ -15,6 +15,7 @@ const Main = styled("div")({
 
 const MainRight = styled("div")({
   width: "100%",
+  height: "100%",
 });
 
 const PageLayout = ({ children }: Props) => {
