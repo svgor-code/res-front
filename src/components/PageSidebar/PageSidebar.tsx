@@ -6,12 +6,13 @@ import BottomSidebar from "./BottomSidebar";
 const NormalSidebar = styled("div")({
   width: "10%",
   height: "100%",
-  borderRight: "2px solid #030f1c",
   "@media (max-width:1700px)": {
-    width: "6%",
+    display: "flex",
+    width: "100%",
+    height: "10%",
   },
 });
-const Sidebar = () => {
+const PageSidebar = () => {
   return (
     <NormalSidebar>
       <TopSidebar></TopSidebar>
@@ -20,4 +21,4 @@ const Sidebar = () => {
   );
 };
 
-export default Sidebar;
+export default PageSidebar;

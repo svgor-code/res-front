@@ -1,7 +1,7 @@
 import React from "react";
 import { styled } from "@mui/system";
 import { sidebarArray } from "./SidebarInterface";
-import logo from "src/images/svg/Logo.svg";
+
 import { Link } from "react-router-dom";
 
 const NavigateList = styled("div")({
@@ -11,15 +11,23 @@ const NavigateList = styled("div")({
   width: "100%",
   height: "55%",
   background: "#081A2C",
-  // boxShadow: "5px -2px 5px -5px red",
-});
+  "@media (max-width:1700px)": {
+    flexDirection: "row",
+    height: "100%",
+    width: "100%",
+  },
 
-const LogoImage = styled("img")({
-  margin: "10% 0 30%",
+  // boxShadow: "5px -2px 5px -5px red",
 });
 
 const List = styled("div")({
   width: "100%",
+  "@media (max-width:1700px)": {
+    height: "50%",
+    width: "100%",
+    display: "flex",
+    justifyContent: "space-evenly",
+  },
 });
 
 const ListItem = styled("div")({
@@ -39,6 +47,16 @@ const ListItem = styled("div")({
     fill: "#FFFFFF",
   },
   marginTop: "10%",
+
+  "@media (max-width:1700px)": {
+    height: "100%",
+    width: "100%",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "space-between",
+    margin: "0",
+    padding: "0",
+  },
 });
 
 const ItemIcon = styled("span")({
@@ -48,7 +66,10 @@ const ItemIcon = styled("span")({
   "&:hover": {
     fill: "#FFFFFF",
   },
-  "@media (max-width:1700px)": {},
+  "@media (max-width:1700px)": {
+    alignItems: "center",
+    textAlign: "center",
+  },
 });
 
 const ItemText = styled("span")({
@@ -56,14 +77,16 @@ const ItemText = styled("span")({
   display: "flex",
   justifyContent: "start",
   "@media (max-width:1700px)": {
-    display: "none",
+    alignItems: "center",
+    textAlign: "center",
+
+    width: "100%",
   },
 });
 
 const TopSidebar = () => {
   return (
     <NavigateList>
-      <LogoImage src={logo} alt="camera" />
       <List>
         {sidebarArray.map((item) => (
           <Link

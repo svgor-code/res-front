@@ -8,24 +8,28 @@ type Props = {
 };
 
 const Main = styled("div")({
-  display: "flex",
-  justifyContent: "space-between",
   height: "100vh",
 });
 
-const MainRight = styled("div")({
+const Content = styled("div")({
   width: "100%",
-  height: "100%",
+  height: "93%",
+  display: "flex",
+  justifyContent: "space-between",
+  "@media (max-width:1700px)": {
+    flexDirection: "column",
+    height: "93%",
+  },
 });
 
 const PageLayout = ({ children }: Props) => {
   return (
     <Main>
-      <PageSidebar />
-      <MainRight>
-        <NormalHeader />
+      <NormalHeader />
+      <Content>
+        <PageSidebar />
         {children}
-      </MainRight>
+      </Content>
     </Main>
   );
 };

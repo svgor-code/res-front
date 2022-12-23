@@ -12,9 +12,13 @@ import TableRecipe from "src/components/Dashboard/Content/TableRecipe/TableRecip
 import TableDishes from "src/components/Dashboard/Content/TableDishes/TableDishes";
 
 const ContainerDashboard = styled("div")({
-  width: "100%",
-  height: "93%",
+  width: "90%",
+  height: "100%",
   backgroundColor: "#030f1c",
+  "@media (max-width:1700px)": {
+    width: "100%",
+    height: "90%",
+  },
 });
 
 const DashboardGrid = styled("div")({});

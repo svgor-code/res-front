@@ -1,6 +1,7 @@
 import React from "react";
 import { styled } from "@mui/system";
 import avatar from "src/images/svg/avatar.svg";
+import logo from "src/images/svg/Logo.svg";
 
 const NormalHeaderBlock = styled("div")({
   width: "100%",
@@ -9,6 +10,25 @@ const NormalHeaderBlock = styled("div")({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+});
+
+const LogoPosition = styled("div")({
+  width: "10%",
+  height: "100%",
+  background: "#081A2C",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRight: "1px solid #01070E",
+});
+
+const LogoImage = styled("img")({});
+
+const HeaderItems = styled("div")({
+  width: "90%",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "space-between",
 });
 
 const HeaderLeft = styled("div")({
@@ -23,7 +43,7 @@ const HeaderRight = styled("div")({
   width: "17%",
   display: "flex",
   alignItems: "center",
-  justifyContent: "space-between",
+  justifyContent: "space-evenly",
   padding: "0 3%",
 });
 
@@ -70,17 +90,23 @@ const NameUser = styled("h2")({
 const NormalHeader = () => {
   return (
     <NormalHeaderBlock>
-      <HeaderLeft>
-        <UserGreeting>Hello Magrot, Welcome to Spoons</UserGreeting>
-        <BlackBlock>Restaurant Open</BlackBlock>
-        <BlackBlock>24 September 2022</BlackBlock>
-      </HeaderLeft>
+      <LogoPosition>
+        <LogoImage src={logo} alt="camera" />
+      </LogoPosition>
 
-      <HeaderRight>
-        <SmallBlackBlock>Last login: 13:22</SmallBlackBlock>
-        <Avatar src={avatar} />
-        <NameUser>Margot Crouch</NameUser>
-      </HeaderRight>
+      <HeaderItems>
+        <HeaderLeft>
+          <UserGreeting>Hello Magrot, Welcome to Spoons</UserGreeting>
+          <BlackBlock>Restaurant Open</BlackBlock>
+          <BlackBlock>24 September 2022</BlackBlock>
+        </HeaderLeft>
+
+        <HeaderRight>
+          <SmallBlackBlock>Last login: 13:22</SmallBlackBlock>
+          <Avatar src={avatar} />
+          <NameUser>Margot Crouch</NameUser>
+        </HeaderRight>
+      </HeaderItems>
     </NormalHeaderBlock>
   );
 };
