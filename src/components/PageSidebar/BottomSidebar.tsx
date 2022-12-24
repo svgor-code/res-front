@@ -8,7 +8,6 @@ const NavigateList1 = styled("div")({
   "@media (max-width:1700px)": {
     display: "none",
   },
-  // boxShadow: "5px -2px 5px -5px red",
 });
 const BottomSidebar = () => {
   return <NavigateList1></NavigateList1>;

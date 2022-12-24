@@ -16,8 +16,6 @@ const NavigateList = styled("div")({
     height: "100%",
     width: "100%",
   },
-
-  // boxShadow: "5px -2px 5px -5px red",
 });
 
 const List = styled("div")({

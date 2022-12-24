@@ -1,6 +1,6 @@
 import { ReactElement } from "react";
 import { styled } from "@mui/system";
-import NormalHeader from "src/components/PageHeader/NormalHeader";
+import PageHeader from "src/components/PageHeader/PageHeader";
 import PageSidebar from "src/components/PageSidebar/PageSidebar";
 
 type Props = {
@@ -9,6 +9,7 @@ type Props = {
 
 const Main = styled("div")({
   height: "100vh",
+  width: "100vw",
 });
 
 const Content = styled("div")({
@@ -25,7 +26,7 @@ const Content = styled("div")({
 const PageLayout = ({ children }: Props) => {
   return (
     <Main>
-      <NormalHeader />
+      <PageHeader />
       <Content>
         <PageSidebar />
         {children}
