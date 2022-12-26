@@ -4,7 +4,7 @@ import { sidebarArray } from "./SidebarInterface";
 
 import { Link } from "react-router-dom";
 
-const NavigateList = styled("div")({
+const TopSidebarBlock = styled("div")({
   display: "flex",
   flexDirection: "column",
   alignItems: "center",
@@ -16,23 +16,25 @@ const NavigateList = styled("div")({
     height: "100%",
     width: "100%",
   },
+  "@media (max-width:700px)": {},
 });
 
 const List = styled("div")({
   width: "100%",
   "@media (max-width:1700px)": {
-    height: "50%",
+    height: "70%",
     width: "100%",
     display: "flex",
     justifyContent: "space-evenly",
   },
+  "@media (max-width:700px)": {},
 });
 
 const ListItem = styled("div")({
   width: "100%",
   height: "1%",
   display: "flex",
-  justifyContent: "space-between",
+  justifyContent: "space-evenly",
   padding: "20px 10px",
   alignItems: "center",
   fontWeight: "400",
@@ -42,49 +44,73 @@ const ListItem = styled("div")({
   "&:hover": {
     backgroundColor: "#073374",
     color: "#FFFFFF",
-    fill: "#FFFFFF",
   },
   marginTop: "10%",
-
   "@media (max-width:1700px)": {
-    height: "100%",
-    width: "100%",
+    height: "60px",
+    width: "90px",
     display: "flex",
     flexDirection: "column",
     justifyContent: "space-between",
     margin: "0",
     padding: "0",
   },
+  "@media (max-width:700px)": {
+    height: "50px",
+    width: "90px",
+    alignItems: "center",
+    paddingTop: "20%",
+  },
+  "@media (max-width:550px)": {
+    height: "50px",
+    width: "90px",
+  },
+  "@media (max-width:500px)": {
+    height: "50px",
+    width: "80px",
+  },
+  "@media (max-width:450px)": {
+    height: "50px",
+    width: "70px",
+  },
+  "@media (max-width:400px)": {
+    height: "50px",
+    width: "60px",
+  },
 });
 
-const ItemIcon = styled("span")({
-  width: "30%",
+const ItemIcon = styled("img")({
+  width: "12%",
   display: "flex",
   justifyContent: "center",
   "&:hover": {
     fill: "#FFFFFF",
   },
   "@media (max-width:1700px)": {
-    alignItems: "center",
-    textAlign: "center",
+    width: "35%",
+  },
+  "@media (max-width:700px)": {
+    width: "30%",
   },
 });
 
 const ItemText = styled("span")({
-  width: "70%",
+  width: "60%",
   display: "flex",
-  justifyContent: "start",
+  justifyContent: "center",
   "@media (max-width:1700px)": {
     alignItems: "center",
     textAlign: "center",
-
     width: "100%",
+  },
+  "@media (max-width:700px)": {
+    display: "none",
   },
 });
 
 const TopSidebar = () => {
   return (
-    <NavigateList>
+    <TopSidebarBlock>
       <List>
         {sidebarArray.map((item) => (
           <Link
@@ -93,13 +119,13 @@ const TopSidebar = () => {
             to={item.path}
           >
             <ListItem>
-              <ItemIcon>{item.icon}</ItemIcon>
+              <ItemIcon src={item.icon} alt={item.text} />
               <ItemText> {item.text}</ItemText>
             </ListItem>
           </Link>
         ))}
       </List>
-    </NavigateList>
+    </TopSidebarBlock>
   );
 };
 

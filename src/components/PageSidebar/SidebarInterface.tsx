@@ -1,11 +1,11 @@
 import { ReactElement } from "react";
 
-import { ReactComponent as NewsSvg } from "src/images/svg/news.svg";
-import { ReactComponent as AllOrdersSvg } from "src/images/svg/allOrders.svg";
-import { ReactComponent as BookingSvg } from "src/images/svg/booking.svg";
-import { ReactComponent as DeliverySvg } from "src/images/svg/delivery.svg";
-import { ReactComponent as FoodSvg } from "src/images/svg/food.svg";
-import { ReactComponent as KitchenSvg } from "src/images/svg/kitchen.svg";
+import newsSvg from "src/images/svg/news.svg";
+import allOrdersSvg from "src/images/svg/allOrders.svg";
+import bookingSvg from "src/images/svg/booking.svg";
+import deliverySvg from "src/images/svg/delivery.svg";
+import foodSvg from "src/images/svg/food.svg";
+import kitchenSvg from "src/images/svg/kitchen.svg";
 import {
   DASHBOARD_PATH,
   KITCHEN_PATH,
@@ -16,12 +16,12 @@ import {
 } from "src/routing/config/paths";
 
 interface SidebarInterface {
-  icon: ReactElement;
+  icon: string;
   text: string;
   path: string;
 }
 const MenuList = (
-  icon: ReactElement,
+  icon: string,
   text: string,
   path: string,
 ): SidebarInterface => {
@@ -33,10 +33,10 @@ const MenuList = (
 };
 
 export const sidebarArray: SidebarInterface[] = [
-  MenuList(<NewsSvg />, "Dashboard", DASHBOARD_PATH),
-  MenuList(<AllOrdersSvg />, "All Orders", ORDERS_PATH),
-  MenuList(<FoodSvg />, "Food Menu", MENU_PATH),
-  MenuList(<KitchenSvg />, "Live Kitchen", KITCHEN_PATH),
-  MenuList(<DeliverySvg />, "Deliveries/Staff", STAFF_PATH),
-  MenuList(<BookingSvg />, "Table Booking", TABLE_BOOKING_PATH),
+  MenuList(newsSvg, "Dashboard", DASHBOARD_PATH),
+  MenuList(allOrdersSvg, "All Orders", ORDERS_PATH),
+  MenuList(bookingSvg, "Food Menu", MENU_PATH),
+  MenuList(foodSvg, "Live Kitchen", KITCHEN_PATH),
+  MenuList(deliverySvg, "Deliveries/Staff", STAFF_PATH),
+  MenuList(kitchenSvg, "Table Booking", TABLE_BOOKING_PATH),
 ];

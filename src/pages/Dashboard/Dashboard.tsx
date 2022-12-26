@@ -19,6 +19,7 @@ const ContainerDashboard = styled("div")({
     width: "100%",
     height: "90%",
   },
+  "@media (max-width:700px)": {},
 });
 
 const DashboardGrid = styled("div")({});
