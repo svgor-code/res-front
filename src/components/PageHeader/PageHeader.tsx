@@ -35,8 +35,6 @@ const LogoPosition = styled("div")({
   },
 });
 
-const LogoImage = styled("img")({});
-
 const HeaderItems = styled("div")({
   width: "90%",
   display: "flex",
@@ -143,7 +141,7 @@ const PageHeader = () => {
   return (
     <PageHeaderBlock>
       <LogoPosition>
-        <LogoImage src={logo} alt="camera" />
+        <img src={logo} alt="camera" />
       </LogoPosition>
 
       <HeaderItems>
