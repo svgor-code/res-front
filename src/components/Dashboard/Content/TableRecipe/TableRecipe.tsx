@@ -1,27 +1,24 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
 import ratingImg from "src/images/svg/rating.svg";
+import {
+  DashedLine,
+  NameDashboardItem,
+  ViewButton,
+} from "src/components/UI/commonStyles";
 
 const BlockTableRecipe = styled("div")({
-  width: "19.2%",
+  width: "19%",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
   margin: "17px 0px 0px 18px",
-  padding: "25px",
+  padding: "10px  25px",
   "@media (max-width:1900px)": {
     width: "19.5%",
     margin: "15px 0px 0px 14px",
     padding: "19px 19px",
   },
-});
-
-export const BlockName = styled("span")({
-  width: "147px",
-  fontWeight: "500",
-  fontSize: "18px",
-  lineHeight: "21px",
-  color: "#FFFFFF",
 });
 
 const TableRecipeBlocks = styled("div")({
@@ -34,7 +31,7 @@ const TableRecipeBlocks = styled("div")({
 const BlockDishes = styled("div")({
   textAlign: "center",
   width: "37%",
-  height: "130px",
+  height: "110px",
   background: "#061321",
   borderRadius: "10px",
   "@media (max-width:1900px)": {
@@ -151,31 +148,10 @@ const PopularsItemRightRating = styled("div")({
   color: "#7E89A8",
 });
 
-const TableRecipeLine = styled("div")({
-  marginTop: "20px ",
-  marginBottom: "25px",
-  width: "100%",
-  border: "0.5px dashed #2A527A",
-  "@media (max-width:1900px)": {
-    marginTop: "14px",
-    marginBottom: "14px",
-  },
-});
-
 const TableRecipeLineView = styled("div")({
   display: "flex",
   justifyContent: "end",
-  marginTop: "20px",
-});
-
-const TableRecipeLineViewButton = styled("button")({
-  width: "36.5%",
-  padding: "7px",
-  borderRadius: "5px",
-  background: "#073374",
-  color: "#FFFFFF",
-  cursor: "pointer",
-  border: "none",
+  marginTop: "25px",
 });
 
 const TableRecipe = () => {
@@ -191,7 +167,7 @@ const TableRecipe = () => {
 
   return (
     <BlockTableRecipe>
-      <BlockName>Todays Recipe/Dish</BlockName>
+      <NameDashboardItem>Todays Recipe/Dish</NameDashboardItem>
 
       <TableRecipeBlocks>
         <BlockDishes>
@@ -235,12 +211,12 @@ const TableRecipe = () => {
               <PopularsItemRightRating>{dish.rating}</PopularsItemRightRating>
             </PopularsItemRight>
           </PopularsItems>
-          {dishes.length - 1 !== index && <TableRecipeLine />}
+          {dishes.length - 1 !== index && <DashedLine />}
         </PopularsBody>
       ))}
 
       <TableRecipeLineView>
-        <TableRecipeLineViewButton>View All</TableRecipeLineViewButton>
+        <ViewButton>View All</ViewButton>
       </TableRecipeLineView>
     </BlockTableRecipe>
   );

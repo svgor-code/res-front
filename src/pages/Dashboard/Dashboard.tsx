@@ -29,7 +29,7 @@ const DashboardUpBlock = styled("div")({
 
 const DashboardDownBlock = styled("div")({
   display: "flex",
-  height: "600px",
+  height: "560px",
   "@media (max-width:1900px)": {
     height: "525px",
   },
