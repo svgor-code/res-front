@@ -43,7 +43,7 @@ const Dashboard = () => {
           <NewOrders />
           <ProcessOrders />
           <DeliveredOrders />
-          <TableBooking />
+          <TableBooking totalBooking={12} people={27} specialRequest={2} />
           <LiveKitchen />
         </DashboardUpBlock>
 
