@@ -11,3 +11,5 @@ export const MENU_PAGE = LazyPage("Menu/Menu");
 export const STAFF_PAGE = LazyPage("Staff/Staff");
 export const KITCHEN_PAGE = LazyPage("Kitchen/Kitchen");
 export const TABLE_BOOKING_PAGE = LazyPage("TableBooking/TableBooking");
+
+export const AUTH_PAGE = lazy(() => import("src/auth/layout/AuthLayout"));

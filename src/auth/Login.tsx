@@ -1,90 +1,115 @@
-import React from "react";
-import { styled } from "@mui/material/styles";
+import React, { useState, useRef, useEffect, useContext } from "react";
+import AuthContext from "./context/AuthProvider";
 
-import Box from "@mui/material/Box";
-import Card from "@mui/material/Card";
-import CardActions from "@mui/material/CardActions";
-import CardContent from "@mui/material/CardContent";
-import Button from "@mui/material/Button";
-import Typography from "@mui/material/Typography";
+import auth from "./Auth.module.css";
 
-const LoginBox = styled("div")({
-  position: "absolute",
-  top: "50%",
-  right: "50%",
-  width: "500px",
-  height: "500px",
-  "& .MuiCard-root": {
-    height: "100%",
-  },
-  "& .MuiPaper-root": {
-    backgroundColor: "#081A2C",
-    border: "0.5px solid #153453",
-  },
-  "& .MuiTypography-root": {
-    color: "white",
-  },
-  "& .MuiCardContent-root": {
-    height: "50%",
-  },
-  "& .MuiCardActions-root": {
-    height: "50%",
-  },
-});
+import axios from "./api/axios";
+const LOGIN_URL = "/auth";
 
-const Login = () => {
+const LoginForm = ({ onChange }: any) => {
+  const { setAuth } = useContext<any>(AuthContext);
+
+  const userRef = useRef<any>();
+  const errRef = useRef<any>();
+
+  const [user, setUser] = useState<string>("");
+  const [pwd, setPwd] = useState<string>("");
+  const [errMsg, setErrMsg] = useState<string>("");
+  const [success, setSuccess] = useState<boolean>(false);
+
+  useEffect(() => {
+    userRef.current.focus();
+  }, []);
+
+  useEffect(() => {
+    setErrMsg("");
+  }, [user, pwd]);
+  const handleSubmit = async (e: any) => {
+    e.preventDefault();
+    // console.log(user, pwd);
+
+    try {
+      const response = await axios.post(
+        LOGIN_URL,
+        JSON.stringify({ user, pwd }),
+        {
+          headers: {
+            "Content-Type": "application/json",
+            "Access-Control-Allow-Origin": "*",
+          },
+          withCredentials: true,
+        },
+      );
+      console.log(JSON.stringify(response?.data));
+      // console.log(JSON.stringify(response));
+
+      const accessToken = response?.data?.accessToken;
+      const roles = response?.data?.roles;
+      setAuth({ user, pwd, roles, accessToken });
+
+      setUser("");
+      setPwd("");
+      setSuccess(true);
+    } catch (err: any) {
+      if (!err?.response) {
+        setErrMsg("No server response");
+      } else if (err.response?.status === 400) {
+        setErrMsg("Missing username or password");
+      } else if (err.response?.stats === 401) {
+        setErrMsg("unauthorized");
+      } else {
+        setErrMsg("Login Failed");
+      }
+      errRef.current.focus();
+    }
+  };
+
   return (
-    <div>
-      <LoginBox>
-        <Card variant="outlined">
-          <CardContent>
-            <Typography
-              sx={{ fontSize: 14 }}
-              color="text.secondary"
-              gutterBottom
-            >
-              Word of the Day
-            </Typography>
-            <Typography variant="h5" component="div"></Typography>
-            <Typography sx={{ mb: 1.5 }} color="text.secondary">
-              adjective
-            </Typography>
-            <Typography variant="body2">well meaning and kindly.</Typography>
-          </CardContent>
-          <CardActions>
-            <Button size="small">Learn More</Button>
-          </CardActions>
-        </Card>
-      </LoginBox>
-    </div>
+    <>
+      {success ? (
+        <p>you are successfully logged in!</p>
+      ) : (
+        <div className={auth.main_form}>
+          <h1>SIGN IN</h1>
+          <p
+            ref={errRef}
+            className={errMsg ? auth.err_msg : auth.off_screen}
+            aria-live="assertive"
+          >
+            {errMsg}
+          </p>
+          <form className={auth.login_form} onSubmit={handleSubmit}>
+            <label htmlFor="username">username:</label>
+            <input
+              className={auth.login_input}
+              type="text"
+              id="username"
+              ref={userRef}
+              autoComplete="off"
+              onChange={(e) => setUser(e.target.value)}
+              value={user}
+              required
+            />
+            <label htmlFor="password">password:</label>
+            <input
+              className={auth.pwd_input}
+              type="password"
+              id="password"
+              ref={userRef}
+              autoComplete="off"
+              onChange={(e) => setPwd(e.target.value)}
+              value={pwd}
+              required
+            />
+            <button disabled={!user || !pwd ? true : false} type="submit">
+              Sign in
+            </button>
+            <button onClick={onChange}>Dont have an account? sign up</button>
+          </form>
+        </div>
+      )}
+    </>
   );
-  //   if(isShow){
-  //       return (
-  //           <Box sx={{ minWidth: 275 }}>
-  //           <Card variant="outlined">
-  //           <CardContent>
-  //     <Typography sx={{ fontSize: 14 }} color="text.secondary" gutterBottom>
-  //       Word of the Day
-  //     </Typography>
-  //     <Typography variant="h5" component="div">
-
-  //     </Typography>
-  //     <Typography sx={{ mb: 1.5 }} color="text.secondary">
-  //       adjective
-  //     </Typography>
-  //     <Typography variant="body2">
-  //       well meaning and kindly.
-  //       <br />
-  //       {'"a benevolent smile"'}
-  //     </Typography>
-  //   </CardContent>
-  //   <CardActions>
-  //     <Button size="small">Learn More</Button>
-  //   </CardActions>
-  //           </Card>
-  //         </Box>
-  //       )
-  //   }
 };
 
-export default Login;
+export default LoginForm;

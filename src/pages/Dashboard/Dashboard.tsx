@@ -10,7 +10,6 @@ import SalesGraph from "src/components/Dashboard/Content/SalesGraph/SalesGraph";
 import TableDetails from "src/components/Dashboard/Content/TableDetails/TableDetails";
 import TableRecipe from "src/components/Dashboard/Content/TableRecipe/TableRecipe";
 import TableDishes from "src/components/Dashboard/Content/TableDishes/TableDishes";
-
 import IncomeCard from "src/components/Dashboard/Content/IncomeCard/IncomeCard";
 
 const ContainerDashboard = styled("div")({

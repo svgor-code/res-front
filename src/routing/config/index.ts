@@ -6,6 +6,7 @@ import {
   ORDERS_PAGE,
   STAFF_PAGE,
   TABLE_BOOKING_PAGE,
+  AUTH_PAGE,
 } from "./pages";
 import {
   DASHBOARD_PATH,
@@ -14,6 +15,7 @@ import {
   ORDERS_PATH,
   STAFF_PATH,
   TABLE_BOOKING_PATH,
+  AUTH_PATH,
 } from "./paths";
 
 interface IPrivateRoute {
@@ -45,6 +47,10 @@ export const PrivateRoutes: IPrivateRoute[] = [
   {
     path: TABLE_BOOKING_PATH,
     component: TABLE_BOOKING_PAGE,
+  },
+  {
+    path: AUTH_PATH,
+    component: AUTH_PAGE,
   },
 ];
 

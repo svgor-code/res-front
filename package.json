@@ -10,6 +10,7 @@
     "@mui/styled-engine-sc": "^5.10.6",
     "@mui/x-date-pickers": "^5.0.7",
     "@reduxjs/toolkit": "^1.8.6",
+    "axios": "^1.2.3",
     "dayjs": "^1.11.6",
     "i18next": "^22.0.4",
     "moment": "^2.29.4",
