@@ -5,19 +5,30 @@ import { TextFoodMenu, TitleFoodMenu } from "src/components/UI/commonStyles";
 
 const BlockSnaksBody = styled("div")({
   marginTop: "40px",
+  width: "20.5%",
 });
 
 const BlocksDrinks = styled("div")({
   marginTop: "18px",
   overflowY: "scroll",
   height: "726px",
+  paddingRight: "34px",
+  "&::-webkit-scrollbar": {
+    width: "4px",
+    borderRadius: "20px",
+    background: "#091C30",
+  },
+  "&::-webkit-scrollbar-thumb": {
+    background: "#2A4B6C",
+    height: "152px",
+    borderRadius: "20px",
+  },
   "@media (max-height:1900px)": {
-    height: "725px",
+    height: "715px",
   },
 });
 
 const ItemDrinksBlock = styled("div")({
-  width: "244px",
   height: "70px",
   padding: "14px 11px 14px 16px",
   marginBottom: "14px",

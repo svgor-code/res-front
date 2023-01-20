@@ -45,15 +45,22 @@ const ControlsTitle = styled("div")({
   color: "#C3EAE9",
 });
 
-const BlockCallKitchen = styled("div")({
+const BlockCallKitchen = styled("button")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
   marginTop: "8px",
   height: "74px",
-  background: "#05A4A0",
-  // opacity: "0.2",
+  background: "rgba(5, 164, 160, 0.2)",
+  border: "none",
   borderRadius: "12px",
+  cursor: "pointer",
+  width: "100%",
+  transition: ".3s",
+  "&:hover": {
+    background: "rgba(0,255,249,0.2)",
+    transition: ".3s",
+  },
 });
 
 const CallKitchenBody = styled("div")({
@@ -66,7 +73,7 @@ const CallKitchenTitle = styled("div")({
   fontSize: "20px",
   lineHeight: "23px",
   marginLeft: "20px",
-  // color: "#559EAD",
+  color: "#559EAD",
 });
 
 const Controls = () => {

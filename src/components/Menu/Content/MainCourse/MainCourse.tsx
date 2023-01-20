@@ -7,14 +7,26 @@ import {
 import { styled } from "@mui/system";
 import img from "src/images/svg/plug.svg";
 
-const BlockFoodMenuBody = styled("div")({});
+const BlockFoodMenuBody = styled("div")({
+  width: "33%",
+});
 
 const CoursesBlock = styled("div")({
   marginTop: "19px",
   overflowY: "scroll",
   height: "726px",
+  paddingRight: "34px",
+  "&::-webkit-scrollbar": {
+    width: "4px",
+    borderRadius: "20px",
+    background: "#091C30",
+  },
+  "&::-webkit-scrollbar-thumb": {
+    background: "#2A4B6C",
+    borderRadius: "20px",
+  },
   "@media (max-height:1900px)": {
-    height: "725px",
+    height: "715px",
   },
 });
 
@@ -23,7 +35,6 @@ const ItemCourseBlock = styled("div")({
   justifyContent: "space-around",
   alignItems: "center",
   marginBottom: "15px",
-  width: "457px",
   height: "127px",
   background: "#0F2439",
   border: "0.5px solid #153453",
@@ -84,7 +95,6 @@ const ItemCourseDollar = styled("span")({
   fontWeight: "500",
   fontSize: "14px",
   lineHeight: "16px",
-  // color: "#234989",
 });
 
 type CoursesType = {

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { styled } from "@mui/system";
 import TotalDeliveryStaff from "src/components/Staff/Content/TotalDeliveryStaff/TotalDeliveryStaff";
 import AbsentStaff from "src/components/Staff/Content/AbsentStaff/AbsentStaff";
-import { ViewAll, ViewButton } from "../../components/UI/commonStyles";
+import { ViewAll, ViewButton } from "src/components/UI/commonStyles";
 
 const ContainerStaff = styled("div")({
   minHeight: "calc(100vh - 64px)",
