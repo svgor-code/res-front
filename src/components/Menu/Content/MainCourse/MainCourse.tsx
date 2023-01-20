@@ -1,10 +1,13 @@
 import React from "react";
+
+import { styled } from "@mui/system";
+
 import {
   NameDashboardItem,
   TextFoodMenu,
   TitleFoodMenu,
 } from "src/components/UI/commonStyles";
-import { styled } from "@mui/system";
+
 import img from "src/images/svg/plug.svg";
 
 const BlockFoodMenuBody = styled("div")({

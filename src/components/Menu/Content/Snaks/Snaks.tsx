@@ -1,7 +1,10 @@
 import React from "react";
+
 import { styled } from "@mui/system";
-import img from "src/images/svg/plug.svg";
+
 import { TextFoodMenu, TitleFoodMenu } from "src/components/UI/commonStyles";
+
+import img from "src/images/svg/plug.svg";
 
 const BlockSnaksBody = styled("div")({
   marginTop: "40px",

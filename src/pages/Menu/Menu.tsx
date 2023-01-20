@@ -1,5 +1,7 @@
 import React from "react";
+
 import { styled } from "@mui/system";
+
 import MainCourse from "src/components/Menu/Content/MainCourse/MainCourse";
 import Snaks from "src/components/Menu/Content/Snaks/Snaks";
 import Drinks from "src/components/Menu/Content/Drinks/Drinks";
