@@ -8,8 +8,10 @@ type Props = {
 };
 
 const Main = styled("div")({
-  height: "100vh",
-  width: "100vw",
+  height: "100%",
+  minHeight: "100vh",
+  width: "100%",
+  backgroundColor: "#030f1c",
 });
 
 const Content = styled("div")({
@@ -17,6 +19,7 @@ const Content = styled("div")({
   height: "93%",
   display: "flex",
   justifyContent: "space-between",
+
   "@media (max-width:1700px)": {
     flexDirection: "column",
     height: "93%",

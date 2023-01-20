@@ -14,7 +14,9 @@ import TableDishes from "src/components/Dashboard/Content/TableDishes/TableDishe
 const ContainerDashboard = styled("div")({
   width: "90%",
   height: "100%",
-  backgroundColor: "#030f1c",
+  display: "flex",
+  flexWrap: "wrap",
+
   "@media (max-width:1700px)": {
     width: "100%",
     height: "90%",
@@ -22,10 +24,9 @@ const ContainerDashboard = styled("div")({
   "@media (max-width:700px)": {},
 });
 
-const DashboardGrid = styled("div")({});
-
-const DashboardUpBlock = styled("div")({
+/* const DashboardUpBlock = styled("div")({
   display: "flex",
+  flex: "wrap",
   height: "290px",
 });
 
@@ -35,27 +36,21 @@ const DashboardDownBlock = styled("div")({
   "@media (max-width:1900px)": {
     height: "525px",
   },
-});
+}); */
 
 const Dashboard = () => {
   return (
     <ContainerDashboard>
-      <DashboardGrid>
-        <DashboardUpBlock>
-          <NewOrders />
-          <ProcessOrders />
-          <DeliveredOrders />
-          <TableBooking />
-          <LiveKitchen />
-        </DashboardUpBlock>
+      <NewOrders />
+      <ProcessOrders />
+      <DeliveredOrders />
+      <TableBooking />
+      <LiveKitchen />
 
-        <DashboardDownBlock>
-          <SalesGraph />
-          <TableDetails />
-          <TableRecipe />
-          <TableDishes />
-        </DashboardDownBlock>
-      </DashboardGrid>
+      <SalesGraph />
+      <TableDetails />
+      <TableRecipe />
+      <TableDishes />
     </ContainerDashboard>
   );
 };
