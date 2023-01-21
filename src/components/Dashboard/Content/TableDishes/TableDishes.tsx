@@ -27,14 +27,28 @@ const dishes = [
 ];
 
 const BlockTableDishes = styled("div")({
-  width: "20%",
+  width: "20.5%",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
-
   padding: "10px  25px",
+
   "@media (max-width:1900px)": {
-    width: "24%",
+    width: "45.3%",
+  },
+  "@media (max-width:1340px)": {
+    width: "44.5%",
+  },
+
+  "@media (max-width:1100px)": {
+    width: "42.5%",
+  },
+
+  "@media (max-width:820px)": {
+    width: "40.5%",
+  },
+  "@media (max-width:650px)": {
+    width: "91%",
   },
 });
 

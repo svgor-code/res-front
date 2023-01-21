@@ -6,13 +6,22 @@ import WorkingСhefs from "./WorkingChefs";
 import { NameDashboardItem } from "src/components/UI/commonStyles";
 
 const BlockLiveKitchen = styled("div")({
-  width: "20%",
+  width: "20.5%",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
   padding: "10px  25px",
   "@media (max-width:1900px)": {
-    width: "24%",
+    width: "33.5%",
+  },
+  "@media (max-width: 830px)": {
+    width: "38%",
+  },
+  "@media (max-width:785px)": {
+    width: "40%",
+  },
+  "@media (max-width:740px)": {
+    width: "91%",
   },
 });
 

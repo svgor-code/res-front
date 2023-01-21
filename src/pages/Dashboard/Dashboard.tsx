@@ -15,7 +15,8 @@ const ContainerDashboard = styled("div")({
   width: "90%",
   height: "100%",
   display: "flex",
-  flexWrap: "wrap",
+  flexDirection: "column",
+  padding: "1%",
 
   "@media (max-width:1700px)": {
     width: "100%",
@@ -24,33 +25,36 @@ const ContainerDashboard = styled("div")({
   "@media (max-width:700px)": {},
 });
 
-/* const DashboardUpBlock = styled("div")({
+const DashboardUpBlock = styled("div")({
   display: "flex",
-  flex: "wrap",
-  height: "290px",
+  flexWrap: "wrap",
+  gap: "15px",
+  marginBottom: "1%",
 });
 
 const DashboardDownBlock = styled("div")({
   display: "flex",
-  height: "560px",
-  "@media (max-width:1900px)": {
-    height: "525px",
-  },
-}); */
+  flexWrap: "wrap",
+  gap: "15px",
+});
 
 const Dashboard = () => {
   return (
     <ContainerDashboard>
-      <NewOrders />
-      <ProcessOrders />
-      <DeliveredOrders />
-      <TableBooking />
-      <LiveKitchen />
+      <DashboardUpBlock>
+        <NewOrders />
+        <ProcessOrders />
+        <DeliveredOrders />
+        <TableBooking />
+        <LiveKitchen />
+      </DashboardUpBlock>
 
-      <SalesGraph />
-      <TableDetails />
-      <TableRecipe />
-      <TableDishes />
+      <DashboardDownBlock>
+        <SalesGraph />
+        <TableDetails />
+        <TableRecipe />
+        <TableDishes />
+      </DashboardDownBlock>
     </ContainerDashboard>
   );
 };

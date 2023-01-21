@@ -15,13 +15,20 @@ import {
 import { styled } from "@mui/system";
 
 const BlockSalesGraph = styled("div")({
-  width: "30.10%",
+  width: "31%",
   borderRadius: "6px",
   fontSize: "10px",
   border: "0.5px solid #153453",
   background: "#081A2C",
-
-  "@media (max-width:1900px)": {},
+  "@media (max-width:1900px)": {
+    width: "60%",
+  },
+  "@media (max-width: 1166px)": {
+    width: "58%",
+  },
+  "@media (max-width:740px)": {
+    width: "97%",
+  },
 });
 
 const BlockMain = styled("div")({
@@ -30,7 +37,6 @@ const BlockMain = styled("div")({
   justifyContent: "space-between",
   alignContent: "center",
   alignItems: "center",
-  flexWrap: "wrap",
 });
 
 const BlockMonth = styled("span")({
