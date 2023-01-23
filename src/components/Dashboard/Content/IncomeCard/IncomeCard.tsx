@@ -10,8 +10,8 @@ import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
-import { ReactComponent as Calendar } from "src/images/svg/Vector.svg";
-import { ReactComponent as Icon } from "src/images/svg/icon.svg";
+import { ReactComponent as Calendar } from "src/images/svg/Calendar.svg";
+import { ReactComponent as Icon } from "src/images/svg/info.svg";
 
 import DateModal from "./DateModal";
 
