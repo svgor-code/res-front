@@ -16,22 +16,23 @@ const TopSidebarBlock = styled("div")({
     flexDirection: "row",
     height: "100%",
     width: "100%",
+    padding: "1%",
   },
 });
 
 const List = styled("div")({
   width: "100%",
-  "@media (max-width:1700px)": {
+  "@media (max-width:1900px)": {
     height: "70%",
     width: "100%",
     display: "flex",
     justifyContent: "space-evenly",
   },
-  "@media (max-width:700px)": {},
 });
 
 const ListItem = styled("div")({
   width: "100%",
+  boxSizing: "border-box",
   height: "1%",
   display: "flex",
   justifyContent: "space-evenly",
@@ -46,6 +47,7 @@ const ListItem = styled("div")({
     color: "#FFFFFF",
   },
   marginTop: "10%",
+
   "@media (max-width:1900px)": {
     height: "60px",
     width: "90px",
@@ -54,6 +56,14 @@ const ListItem = styled("div")({
     justifyContent: "space-between",
     margin: "0",
     padding: "0",
+  },
+  "@media (max-width:768px)": {
+    height: "40px",
+    width: "90px",
+  },
+  "@media (max-width:586px)": {
+    height: "20px",
+    width: "50px",
   },
 });
 
@@ -64,11 +74,12 @@ const ItemIcon = styled("img")({
   "&:hover": {
     fill: "#FFFFFF",
   },
-  "@media (max-width:1700px)": {
+
+  "@media (max-width:1900px)": {
     width: "35%",
   },
-  "@media (max-width:700px)": {
-    width: "30%",
+  "@media (max-width:768px)": {
+    // width: "25%",
   },
 });
 
@@ -76,12 +87,13 @@ const ItemText = styled("span")({
   width: "60%",
   display: "flex",
   justifyContent: "center",
-  "@media (max-width:1700px)": {
+
+  "@media (max-width:1900px)": {
     alignItems: "center",
     textAlign: "center",
     width: "100%",
   },
-  "@media (max-width:700px)": {
+  "@media (max-width:768px)": {
     display: "none",
   },
 });
