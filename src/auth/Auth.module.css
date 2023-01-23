@@ -28,7 +28,7 @@ button {
   flex-direction: column;
   justify-content: center;
   margin: auto;
-  width: 75%;
+  max-width: 350px;
 }
 .main_form {
   display: flex;
@@ -36,7 +36,7 @@ button {
   justify-content: center;
   align-items: center;
   margin: auto;
-  width: 80%;
+  width: 100%;
 }
 .input {
   margin: 5px 0;
@@ -44,7 +44,6 @@ button {
 .login_input,
 .pwd_input,
 .email_input {
-  margin: 5px 0;
   border: 1px solid #cdcdcd;
   background-color: white;
   color: #748ba0;
@@ -52,8 +51,8 @@ button {
   border-radius: 5px;
   padding: 0 10px;
   background-color: #101c29a6;
+  margin: 5px 0 20px 0;
 }
-
 .off_screen,
 .hide {
   display: none;
@@ -72,7 +71,7 @@ button {
   color: white;
   border-radius: 6px;
   padding: 5px;
-  width: 98%;
+  max-width: 350px;
   position: relative;
 }
 .pwd_text span {

@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import { PrivateRoute } from "./routes";
 import { PrivateRoutes, privatePaths } from "./config";
 import PageLayout from "src/layouts/PageLayout/PageLayout";
+// import AuthLayout from "src/auth/layout/AuthLayout";
 
 const RoutesWrapper = () => {
   return (

@@ -2,6 +2,7 @@ import React, { useState, useRef, useEffect } from "react";
 
 import auth from "./Auth.module.css";
 import axios from "./api/axios";
+import Dashboard from "src/pages/Dashboard/Dashboard";
 
 import { Icon } from "@iconify/react";
 
@@ -66,8 +67,7 @@ const RegisteredForm = ({ onChange }: any) => {
     <>
       {success ? (
         <div>
-          <h1>Success</h1>
-          <button onClick={onChange}>sign in</button>
+          <Dashboard />
         </div>
       ) : (
         <div className={auth.main_form}>
