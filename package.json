@@ -78,7 +78,8 @@
   "hooks": {
     "pre-commit": "tsc && lint-staged"
   },
-  "**/*.+(js|jsx|css|less|scss|ts|tsx|md)": [
+  "**/*.+(js|jsx|ts|tsx)": [
+    "node_modules/.bin/eslint --max-warnings=0",
     "prettier --write",
     "git add"
   ]
