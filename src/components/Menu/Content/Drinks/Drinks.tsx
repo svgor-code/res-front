@@ -53,6 +53,7 @@ const DrinksPhoto = styled("img")({
 const DrinksInfo = styled("div")({
   marginLeft: "13px",
 });
+
 const DrinksNameSpan = styled("div")({
   width: "90px",
   fontStyle: "normal",
@@ -60,6 +61,7 @@ const DrinksNameSpan = styled("div")({
   fontSize: "14px",
   color: "#ADBCE9",
 });
+
 const AnotherInfoSnaks = styled("div")({
   display: "flex",
   marginTop: "18px",

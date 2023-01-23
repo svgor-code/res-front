@@ -10,7 +10,7 @@ const BlockControlsBody = styled("div")({
   width: "21%",
 });
 
-const BlockControlsAdd = styled("div")({
+const BlockControlsAdd = styled("button")({
   display: "flex",
   justifyContent: "center",
   alignItems: "center",
@@ -18,6 +18,8 @@ const BlockControlsAdd = styled("div")({
   height: "216px",
   background: "#0F2439",
   borderRadius: "12px",
+  cursor: "pointer",
+  width: "100%",
 });
 
 const ControlsAddFromList = styled("div")({
@@ -68,7 +70,7 @@ const BlockCallKitchen = styled("button")({
 const CallKitchenBody = styled("div")({
   display: "flex",
 });
-const CallKitchenIcon = styled("img")({});
+
 const CallKitchenTitle = styled("div")({
   fontStyle: "normal",
   fontWeight: "400",
@@ -99,7 +101,7 @@ const Controls = () => {
       </BlockControlsAdd>
       <BlockCallKitchen>
         <CallKitchenBody>
-          <CallKitchenIcon src={phoneIcon} />
+          <img src={phoneIcon} />
           <CallKitchenTitle>Call Kitchen</CallKitchenTitle>
         </CallKitchenBody>
       </BlockCallKitchen>
