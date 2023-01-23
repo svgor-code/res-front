@@ -10,6 +10,7 @@ const PageHeaderBlock = styled("div")({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
+
   "@media (max-width:600px)": {
     display: "flex",
     justifyContent: "space-between",

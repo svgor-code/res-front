@@ -20,15 +20,11 @@ const BlockSalesGraph = styled("div")({
   fontSize: "10px",
   border: "0.5px solid #153453",
   background: "#081A2C",
-  "@media (max-width:1900px)": {
-    width: "60%",
-  },
-  "@media (max-width: 1166px)": {
-    width: "58%",
-  },
-  "@media (max-width:740px)": {
-    width: "97%",
-  },
+  "@media (max-width:1900px)": { width: "60%" },
+  "@media (max-width: 1200px)": { width: "58%" },
+  "@media (max-width: 992px)": { width: "57.3%" },
+  "@media (max-width:768px)": { width: "55%" },
+  "@media (max-width:576px)": { width: "97.5%" },
 });
 
 const BlockMain = styled("div")({

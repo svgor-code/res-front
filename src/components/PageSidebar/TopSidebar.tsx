@@ -11,12 +11,12 @@ const TopSidebarBlock = styled("div")({
   width: "100%",
   height: "55%",
   background: "#081A2C",
-  "@media (max-width:1700px)": {
+
+  "@media (max-width:1900px)": {
     flexDirection: "row",
     height: "100%",
     width: "100%",
   },
-  "@media (max-width:700px)": {},
 });
 
 const List = styled("div")({
@@ -46,7 +46,7 @@ const ListItem = styled("div")({
     color: "#FFFFFF",
   },
   marginTop: "10%",
-  "@media (max-width:1700px)": {
+  "@media (max-width:1900px)": {
     height: "60px",
     width: "90px",
     display: "flex",
@@ -54,28 +54,6 @@ const ListItem = styled("div")({
     justifyContent: "space-between",
     margin: "0",
     padding: "0",
-  },
-  "@media (max-width:700px)": {
-    height: "50px",
-    width: "90px",
-    alignItems: "center",
-    paddingTop: "20%",
-  },
-  "@media (max-width:550px)": {
-    height: "50px",
-    width: "90px",
-  },
-  "@media (max-width:500px)": {
-    height: "50px",
-    width: "80px",
-  },
-  "@media (max-width:450px)": {
-    height: "50px",
-    width: "70px",
-  },
-  "@media (max-width:400px)": {
-    height: "50px",
-    width: "60px",
   },
 });
 

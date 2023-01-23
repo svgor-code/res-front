@@ -13,19 +13,20 @@ import TableDishes from "src/components/Dashboard/Content/TableDishes/TableDishe
 
 const ContainerDashboard = styled("div")({
   width: "90%",
-  height: "100%",
   display: "flex",
   flexDirection: "column",
-  padding: "1%",
+  padding: "1% 0.5% 0 1%",
+  boxSizing: "border-box",
 
-  "@media (max-width:1700px)": {
+  "@media (max-width:1900px)": {
     width: "100%",
     height: "90%",
+    padding: "1% 0 0 1%",
   },
-  "@media (max-width:700px)": {},
 });
 
 const DashboardUpBlock = styled("div")({
+  width: "100%",
   display: "flex",
   flexWrap: "wrap",
   gap: "15px",
@@ -33,6 +34,7 @@ const DashboardUpBlock = styled("div")({
 });
 
 const DashboardDownBlock = styled("div")({
+  width: "100%",
   display: "flex",
   flexWrap: "wrap",
   gap: "15px",

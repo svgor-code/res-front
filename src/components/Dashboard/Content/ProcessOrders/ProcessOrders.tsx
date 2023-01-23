@@ -8,15 +8,12 @@ const BlockProcessOrders = styled("div")({
   border: "0.5px solid #153453",
   background: "#081A2C",
   paddingBottom: "2%",
-  "@media (max-width:1900px)": {
-    width: "31.8%",
-  },
-  "@media (max-width:800px)": {
-    width: "30%",
-  },
-  "@media (max-width:650px)": {
-    width: "91%",
-  },
+
+  "@media (max-width:1900px)": { width: "32.1%" },
+  "@media (max-width: 1200px)": { width: "31.5%" },
+  "@media (max-width: 992px)": { width: "31.3%" },
+  "@media (max-width:768px)": { width: "31%" },
+  "@media (max-width:576px)": { width: "97.5%" },
 });
 
 const ProcessOrdersInfo = styled("div")({

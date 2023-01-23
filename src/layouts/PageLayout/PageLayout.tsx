@@ -20,10 +20,7 @@ const Content = styled("div")({
   display: "flex",
   justifyContent: "space-between",
 
-  "@media (max-width:1700px)": {
-    flexDirection: "column",
-    height: "93%",
-  },
+  "@media (max-width:1900px)": { flexDirection: "column" },
 });
 
 const PageLayout = ({ children }: Props) => {

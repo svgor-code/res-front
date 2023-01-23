@@ -6,7 +6,7 @@ import BottomSidebar from "./BottomSidebar";
 const PageSidebarBlock = styled("div")({
   width: "10%",
   height: "100%",
-  "@media (max-width:1700px)": {
+  "@media (max-width:1900px)": {
     display: "flex",
     width: "100%",
     height: "10%",

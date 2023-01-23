@@ -12,24 +12,13 @@ const BlockTableRecipe = styled("div")({
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
-  padding: "10px  25px",
+  padding: "1%  1.5%",
 
-  "@media (max-width:1900px)": {
-    width: "45.3%",
-  },
-  "@media (max-width:1340px)": {
-    width: "44.5%",
-  },
-  "@media (max-width:1100px)": {
-    width: "42.5%",
-  },
-  "@media (max-width:820px)": {
-    width: "40.5%",
-  },
-
-  "@media (max-width:650px)": {
-    width: "91%",
-  },
+  "@media (max-width:1900px)": { width: "45.9%" },
+  "@media (max-width: 1200px)": { width: "45.3%" },
+  "@media (max-width:992px)": { width: "44.9%" },
+  "@media (max-width:768px)": { width: "44.7%" },
+  "@media (max-width:576px)": { width: "94.5%" },
 });
 
 const TableRecipeBlocks = styled("div")({

@@ -10,19 +10,12 @@ const BlockLiveKitchen = styled("div")({
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
-  padding: "10px  25px",
-  "@media (max-width:1900px)": {
-    width: "33.5%",
-  },
-  "@media (max-width: 830px)": {
-    width: "38%",
-  },
-  "@media (max-width:785px)": {
-    width: "40%",
-  },
-  "@media (max-width:740px)": {
-    width: "91%",
-  },
+  padding: "1% 1.5%",
+  "@media (max-width:1900px)": { width: "34.5%" },
+  "@media (max-width: 1200px)": { width: "35.3%" },
+  "@media (max-width: 992px)": { width: "38%" },
+  "@media (max-width:768px)": { width: "41.5%" },
+  "@media (max-width:576px)": { width: "94.5%" },
 });
 
 const Cameras = styled("div")({
