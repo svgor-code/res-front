@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./",
     "lint-fix": "eslint ./ --fix",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,tsx,ts,json,md}\"",
     "precommit": "lint-staged",
     "eslint": "node_modules/.bin/eslint src/"
   },
