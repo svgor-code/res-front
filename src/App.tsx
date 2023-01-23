@@ -1,8 +1,8 @@
-import "src/App.css";
-import RoutesWrapper from "src/routing";
+import 'src/App.css'
+import RoutesWrapper from 'src/routing'
 
 const App = () => {
-  return <RoutesWrapper />;
-};
+  return <RoutesWrapper />
+}
 
-export default App;
+export default App
