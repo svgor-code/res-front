@@ -22,6 +22,7 @@ const TopSidebarBlock = styled("div")({
 
 const List = styled("div")({
   width: "100%",
+
   "@media (max-width:1900px)": {
     height: "70%",
     width: "100%",
@@ -77,9 +78,6 @@ const ItemIcon = styled("img")({
 
   "@media (max-width:1900px)": {
     width: "35%",
-  },
-  "@media (max-width:768px)": {
-    // width: "25%",
   },
 });
 

@@ -10,11 +10,6 @@ const PageHeaderBlock = styled("div")({
   display: "flex",
   justifyContent: "space-between",
   alignItems: "center",
-
-  "@media (max-width:600px)": {
-    display: "flex",
-    justifyContent: "space-between",
-  },
 });
 
 const LogoPosition = styled("div")({
@@ -25,15 +20,10 @@ const LogoPosition = styled("div")({
   alignItems: "center",
   justifyContent: "center",
   borderRight: "1px solid #01070E",
-  "@media (max-width:1700px)": {
-    borderRight: "0",
-  },
-  "@media (max-width:992px)": {
-    width: "20%",
-  },
-  "@media (max-width:700px)": {
-    width: "35%",
-  },
+
+  "@media (max-width:1900px)": { borderRight: "0" },
+  "@media (max-width:992px)": { width: "20%" },
+  "@media (max-width:768px)": { width: "35%" },
 });
 
 const HeaderItems = styled("div")({
@@ -41,9 +31,8 @@ const HeaderItems = styled("div")({
   display: "flex",
   alignItems: "center",
   justifyContent: "space-between",
-  "@media (max-width:600px)": {
-    justifyContent: "end",
-  },
+
+  "@media (max-width:768px)": { justifyContent: "end" },
 });
 
 const HeaderItemsLeft = styled("div")({
@@ -52,44 +41,21 @@ const HeaderItemsLeft = styled("div")({
   alignItems: "center",
   justifyContent: "space-evenly",
   padding: "0 1%",
-  "@media (max-width:600px)": {
-    display: "none",
-  },
+
+  "@media (max-width:768px)": { display: "none" },
 });
 
 const HeaderItemsRight = styled("div")({
-  width: "18%",
+  width: "17%",
   display: "flex",
   alignItems: "center",
   justifyContent: "space-evenly",
   padding: "0 3%",
-  "@media (max-width:1420px)": {
-    width: "22%",
-  },
-  "@media (max-width:1200px)": {
-    width: "25%",
-  },
-  "@media (max-width:1100px)": {
-    width: "28%",
-  },
-  "@media (max-width:1000px)": {
-    width: "35%",
-  },
-  "@media (max-width:840px)": {
-    width: "40%",
-  },
-  "@media (max-width:700px)": {
-    width: "45%",
-  },
-  "@media (max-width:600px)": {
-    width: "60%",
-  },
-  "@media (max-width:550px)": {
-    width: "70%",
-  },
-  "@media (max-width:450px)": {
-    width: "90%",
-  },
+
+  "@media (max-width:1200px)": { width: "25%" },
+  "@media (max-width:992px)": { width: "35%" },
+  "@media (max-width:768px)": { width: "60%" },
+  "@media (max-width:576px)": { width: "85%" },
 });
 
 const UserGreeting = styled("h2")({
@@ -97,14 +63,12 @@ const UserGreeting = styled("h2")({
   fontSize: "14px",
   color: "#748BA0",
   marginRight: "5%",
-  "@media (max-width:992px)": {
-    display: "none",
-  },
+
+  "@media (max-width:992px)": { display: "none" },
 });
 
 const BlackBlock = styled("div")({
-  width: "170px",
-  height: "40px",
+  width: "40%",
   background: "black",
   fontWeight: "400",
   fontSize: "14px",
@@ -113,11 +77,12 @@ const BlackBlock = styled("div")({
   justifyContent: "center",
   alignItems: "center",
   marginRight: "5%",
+
+  "@media (max-width:768px)": { display: "none" },
 });
 
 const SmallBlackBlock = styled("div")({
-  width: "114px",
-  height: "28px",
+  width: "50%",
   background: "black",
   fontWeight: "400",
   fontSize: "12px",
