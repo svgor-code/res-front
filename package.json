@@ -75,6 +75,9 @@
     "lint-staged": "^13.1.0",
     "prettier": "^2.8.1"
   },
+  "hooks": {
+    "pre-commit": "tsc && lint-staged"
+  },
   "lint-staged": {
     "*.{js, jsx, tsx, ts}": [
       "node_modules/.bin/eslint --max-warnings=0",
