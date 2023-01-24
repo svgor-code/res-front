@@ -31,8 +31,8 @@
     "lint": "eslint ./",
     "lint-fix": "eslint ./ --fix",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
-    "precommit": "lint-staged",
-    "eslint": "node_modules/.bin/eslint src/"
+    "eslint": "node_modules/.bin/eslint src/",
+    "prepare": "husky install"
   },
   "eslintConfig": {
     "extends": [
@@ -80,6 +80,7 @@
       "node_modules/.bin/eslint --max-warnings=2",
       "prettier --write",
       "git add"
-    ]
+    ],
+    "*.{js, jsx, tsx, ts}": "eslint --cache --fix"
   }
 }
