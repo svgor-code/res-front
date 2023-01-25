@@ -71,15 +71,13 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.31.11",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "husky": "^8.0.3",
+    "husky": "^0.14.3",
     "lint-staged": "^13.1.0",
-    "prettier": "^2.8.3"
-  },
-  "hooks": {
-    "pre-commit": "tsc && lint-staged"
+    "prettier": "^2.8.1"
   },
   "lint-staged": {
     "*.{js, jsx, tsx, ts}": [
+      "node_modules/.bin/eslint --max-warnings=0",
       "prettier --write",
       "git add"
     ]
