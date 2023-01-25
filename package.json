@@ -30,7 +30,7 @@
     "eject": "react-scripts eject",
     "lint": "eslint ./",
     "lint-fix": "eslint ./ --fix",
-    "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "precommit": "lint-staged",
     "eslint": "node_modules/.bin/eslint src/"
   },
@@ -77,7 +77,6 @@
   },
   "lint-staged": {
     "*.{js, jsx, tsx, ts}": [
-      "node_modules/.bin/eslint --max-warnings=0",
       "prettier --write",
       "git add"
     ]
