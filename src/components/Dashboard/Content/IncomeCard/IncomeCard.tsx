@@ -11,7 +11,7 @@ import Typography from "@mui/material/Typography";
 import Container from "@mui/material/Container";
 
 import { ReactComponent as Calendar } from "src/images/svg/Vector.svg";
-import { ReactComponent as Icon } from "src/images/svg/icon.svg";
+import { ReactComponent as Info } from "src/images/svg/icon.svg";
 
 import DateModal from "./DateModal";
 
@@ -162,7 +162,7 @@ const EarningDetails = () => {
           <WrapperCardActions>
             <Box>
               <Typography>
-                <Icon />
+                <Info />
               </Typography>
               <Typography>
                 Payment defaults. Completely predominate cross-unit ideas for
