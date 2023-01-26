@@ -33,3 +33,22 @@ export const ViewAll = styled("div")({
   justifyContent: "center",
   marginTop: "30px",
 });
+
+export const TitleFoodMenu = styled("div")({
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  marginTop: "36px",
+  width: "125px",
+  height: "39px",
+  borderRadius: "6px",
+  background: "#0F2439",
+});
+
+export const TextFoodMenu = styled("span")({
+  fontStyle: "normal",
+  fontWeight: "400",
+  fontSize: "14px",
+  lineHeight: "16px",
+  color: "#06CB55",
+});
