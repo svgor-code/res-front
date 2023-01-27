@@ -5,7 +5,7 @@ const NavigateList1 = styled("div")({
   width: "100%",
   height: "45%",
   background: "#01070E",
-  "@media (max-width:1700px)": {
+  "@media (max-width:1900px)": {
     display: "none",
   },
 });

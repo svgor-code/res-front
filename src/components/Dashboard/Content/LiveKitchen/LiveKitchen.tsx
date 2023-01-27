@@ -67,7 +67,6 @@ const NumberOfWorkingCameras = styled("div")({
 
 const WorkingCamerasTitle = styled("h2")({
   width: "73px",
-  whiteSpace: "nowrap",
   fontWeight: "400",
   fontSize: "14px",
   lineHeight: "15px",

@@ -17,6 +17,7 @@ const BlockDeliveredOrders = styled("div")({
 });
 
 const DeliveredOrdersInfo = styled("div")({
+  textAlign: "center",
   margin: "0 auto",
   marginTop: "24px",
   width: "25%",

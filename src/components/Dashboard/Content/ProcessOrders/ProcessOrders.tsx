@@ -17,6 +17,7 @@ const BlockProcessOrders = styled("div")({
 });
 
 const ProcessOrdersInfo = styled("div")({
+  textAlign: "center",
   margin: "0 auto",
   marginTop: "24px",
   width: "25%",
