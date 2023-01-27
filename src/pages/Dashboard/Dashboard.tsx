@@ -30,7 +30,10 @@ const DashboardUpBlock = styled("div")({
   display: "flex",
   flexWrap: "wrap",
   gap: "15px",
-  marginBottom: "1%",
+  marginBottom: "0.5%",
+  "@media (max-width:1900px)": {
+    paddingBottom: "1%",
+  },
 });
 
 const DashboardDownBlock = styled("div")({
@@ -38,6 +41,9 @@ const DashboardDownBlock = styled("div")({
   display: "flex",
   flexWrap: "wrap",
   gap: "15px",
+  "@media (max-width:1900px)": {
+    paddingBottom: "1%",
+  },
 });
 
 const Dashboard = () => {
