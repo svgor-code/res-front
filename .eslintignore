@@ -3,4 +3,4 @@ build
 dist
 res
 coverage
-!.eslintrc.js
+.eslintrc.js
