@@ -9,6 +9,8 @@ const App = () => {
 
 
   return <RoutesWrapper />
+
+
 };
 
-export default App;
+export default App
