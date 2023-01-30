@@ -1,6 +1,6 @@
 import React from "react";
 import { styled } from "@mui/system";
-import { BlockName } from "src/components/Dashboard/Content/TableRecipe/TableRecipe";
+import { NameDashboardItem } from "src/components/UI/commonStyles";
 
 const BlockTodaysBooking = styled("div")({
   paddingTop: "27px",
@@ -36,7 +36,7 @@ const FreeSlots = styled("div")({
 const TodaysBooking = () => {
   return (
     <BlockTodaysBooking>
-      <BlockName>Today’s Booking</BlockName>
+      <NameDashboardItem>Today’s Booking</NameDashboardItem>
       <BlockTodaysBookingBody>
         <ReservedTableBlock />
         <FreeSlots />

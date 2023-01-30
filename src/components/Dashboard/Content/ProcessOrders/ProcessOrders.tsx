@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { styled } from "@mui/system";
-import { ViewAll, ViewButton } from "../NewOrders/NewOrders";
+import { ViewAll, ViewButton } from "src/components/UI/commonStyles";
 
 const BlockProcessOrders = styled("div")({
   width: "15%",
@@ -70,7 +70,7 @@ const ProcessOrdersDescrSpan = styled("span")({
 });
 
 const ProcessOrders = () => {
-  const [number, setNumber] = useState<number>(12);
+  const [number] = useState<number>(12);
 
   return (
     <BlockProcessOrders>

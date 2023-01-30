@@ -11,6 +11,8 @@ import TableDetails from "src/components/Dashboard/Content/TableDetails/TableDet
 import TableRecipe from "src/components/Dashboard/Content/TableRecipe/TableRecipe";
 import TableDishes from "src/components/Dashboard/Content/TableDishes/TableDishes";
 
+import IncomeCard from "src/components/Dashboard/Content/IncomeCard/IncomeCard";
+
 const ContainerDashboard = styled("div")({
   minHeight: "calc(100vh - 64px)",
   backgroundColor: "#030f1c",
@@ -27,7 +29,7 @@ const DashboardUpBlock = styled("div")({
 
 const DashboardDownBlock = styled("div")({
   display: "flex",
-  height: "600px",
+  height: "560px",
   "@media (max-width:1900px)": {
     height: "525px",
   },
@@ -41,12 +43,13 @@ const Dashboard = () => {
           <NewOrders />
           <ProcessOrders />
           <DeliveredOrders />
-          <TableBooking />
+          <TableBooking totalBooking={12} people={27} specialRequest={2} />
           <LiveKitchen />
         </DashboardUpBlock>
 
         <DashboardDownBlock>
           <SalesGraph />
+          <IncomeCard />
           <TableDetails />
           <TableRecipe />
           <TableDishes />
