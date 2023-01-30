@@ -70,7 +70,7 @@ const ProcessOrdersDescrSpan = styled("span")({
 });
 
 const ProcessOrders = () => {
-  const [number, setNumber] = useState<number>(12);
+  const [number] = useState<number>(12);
 
   return (
     <BlockProcessOrders>

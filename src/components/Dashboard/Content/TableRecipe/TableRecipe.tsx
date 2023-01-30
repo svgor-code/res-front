@@ -162,8 +162,8 @@ const TableRecipe = () => {
     { number: "04", name: "Squash and coconut bread", rating: "4.5" },
   ];
 
-  const [veg, setVeg] = useState<string>("35");
-  const [nonVeg, setNonVeg] = useState<string>("29");
+  const [veg] = useState<string>("35");
+  const [nonVeg] = useState<string>("29");
 
   return (
     <BlockTableRecipe>
