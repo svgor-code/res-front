@@ -16,12 +16,13 @@ const ContainerDashboard = styled("div")({
   display: "flex",
   flexDirection: "column",
   padding: "1% 0.5% 0 1%",
-  boxSizing: "border-box",
+  // boxSizing: "border-box",
 
-  "@media (max-width:1900px)": {
+  "@media (max-width:1200px)": {
     width: "100%",
     height: "90%",
     padding: "1% 0 0 1%",
+    marginTop: "2%",
   },
 });
 

@@ -8,20 +8,17 @@ const PageHeaderBlock = styled("div")({
   height: "7%",
   background: "#081A2C",
   display: "flex",
-  justifyContent: "space-between",
-  alignItems: "center",
 });
 
 const LogoPosition = styled("div")({
   width: "10%",
-  height: "100%",
   background: "#081A2C",
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   borderRight: "1px solid #01070E",
 
-  "@media (max-width:1900px)": { borderRight: "0" },
+  "@media (max-width:1200px)": { borderRight: "0" },
   "@media (max-width:992px)": { width: "20%" },
   "@media (max-width:768px)": { width: "35%" },
 });

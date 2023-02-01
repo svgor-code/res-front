@@ -37,6 +37,6 @@ export const sidebarArray: SidebarInterface[] = [
   MenuList(allOrdersSvg, "All Orders", ORDERS_PATH),
   MenuList(foodSvg, "Food Menu", MENU_PATH),
   MenuList(kitchenSvg, "Live Kitchen", KITCHEN_PATH),
-  MenuList(deliverySvg, "Deliveries/Staff", STAFF_PATH),
+  MenuList(deliverySvg, "Deliveries / Staff", STAFF_PATH),
   MenuList(bookingSvg, "Table Booking", TABLE_BOOKING_PATH),
 ];

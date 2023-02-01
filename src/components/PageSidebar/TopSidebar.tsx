@@ -12,7 +12,7 @@ const TopSidebarBlock = styled("div")({
   height: "55%",
   background: "#081A2C",
 
-  "@media (max-width:1900px)": {
+  "@media (max-width:1200px)": {
     flexDirection: "row",
     height: "100%",
     width: "100%",
@@ -23,7 +23,7 @@ const TopSidebarBlock = styled("div")({
 const List = styled("div")({
   width: "100%",
 
-  "@media (max-width:1900px)": {
+  "@media (max-width:1200px)": {
     height: "70%",
     width: "100%",
     display: "flex",
@@ -37,7 +37,7 @@ const ListItem = styled("div")({
   height: "1%",
   display: "flex",
   justifyContent: "space-evenly",
-  padding: "20px 10px",
+  padding: "10% 1%",
   alignItems: "center",
   fontWeight: "400",
   fontSize: "14px",
@@ -47,9 +47,9 @@ const ListItem = styled("div")({
     backgroundColor: "#073374",
     color: "#FFFFFF",
   },
-  marginTop: "10%",
+  marginTop: "9%",
 
-  "@media (max-width:1900px)": {
+  "@media (max-width:1200px)": {
     height: "60px",
     width: "90px",
     display: "flex",
@@ -76,7 +76,7 @@ const ItemIcon = styled("img")({
     fill: "#FFFFFF",
   },
 
-  "@media (max-width:1900px)": {
+  "@media (max-width:1200px)": {
     width: "35%",
   },
 });
@@ -86,7 +86,7 @@ const ItemText = styled("span")({
   display: "flex",
   justifyContent: "center",
 
-  "@media (max-width:1900px)": {
+  "@media (max-width:1200px)": {
     alignItems: "center",
     textAlign: "center",
     width: "100%",
