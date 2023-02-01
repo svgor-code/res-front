@@ -24,9 +24,8 @@ const ContainerDashboard = styled("div")({
     padding: "1% 0 0 1%",
     marginTop: "2%",
   },
-  "@media (max-width:576px)": {
-    height: "93%",
-  },
+  "@media (max-width:768px)": { height: "92%" },
+  "@media (max-width:576px)": { height: "93%" },
 });
 
 const DashboardUpBlock = styled("div")({
