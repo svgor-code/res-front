@@ -15,6 +15,10 @@ const PageSidebarBlock = styled("div")({
     position: "sticky",
     top: 0,
   },
+
+  "@media (max-width:576px)": {
+    height: "5%",
+  },
 });
 const PageSidebar = () => {
   return (

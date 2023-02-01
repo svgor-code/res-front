@@ -62,7 +62,12 @@ const ListItem = styled("div")({
     height: "40px",
     width: "90px",
   },
-  "@media (max-width:586px)": {
+  "@media (max-width:576px)": {
+    height: "30px",
+    width: "70px",
+  },
+
+  "@media (max-width:435px)": {
     height: "20px",
     width: "50px",
   },
