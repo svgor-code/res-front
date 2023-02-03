@@ -4,7 +4,7 @@ import TopSidebar from "./TopSidebar";
 import BottomSidebar from "./BottomSidebar";
 
 const PageSidebarBlock = styled("div")({
-  width: "10.1%",
+  width: "10.12%",
   height: "100%",
   borderRight: "1px solid #01070E",
 
