@@ -11,6 +11,8 @@ import TableDetails from "src/components/Dashboard/Content/TableDetails/TableDet
 import TableRecipe from "src/components/Dashboard/Content/TableRecipe/TableRecipe";
 import TableDishes from "src/components/Dashboard/Content/TableDishes/TableDishes";
 
+import IncomeCard from "src/components/Dashboard/Content/IncomeCard/IncomeCard";
+
 const ContainerDashboard = styled("div")({
   width: "90%",
   display: "flex",
@@ -56,7 +58,7 @@ const Dashboard = () => {
         <NewOrders />
         <ProcessOrders />
         <DeliveredOrders />
-        <TableBooking />
+        <TableBooking totalBooking={12} people={27} specialRequest={2} />
         <LiveKitchen />
       </DashboardUpBlock>
 

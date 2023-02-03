@@ -17,6 +17,7 @@ const LogoPosition = styled("div")({
   alignItems: "center",
   justifyContent: "center",
   borderRight: "1px solid #01070E",
+  boxSizing: "border-box",
 
   "@media (max-width:1200px)": { borderRight: "0" },
   "@media (max-width:992px)": { width: "20%" },

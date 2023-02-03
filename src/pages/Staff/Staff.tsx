@@ -92,7 +92,7 @@ const DeliveredOrdersDescrSpan = styled("span")({
 });
 
 const Staff = () => {
-  const [number, setNumber] = useState("07");
+  const [number] = useState("07");
   return (
     <ContainerStaff>
       <StaffBody>

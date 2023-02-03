@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { styled } from "@mui/system";
 import { ViewAll, ViewButton } from "src/components/UI/commonStyles";
 
@@ -74,7 +74,7 @@ const DeliveredOrdersDescrSpan = styled("span")({
 });
 
 const DeliveredOrders = () => {
-  const [number, setNumber] = useState("07");
+  const [number] = useState("07");
   return (
     <BlockDeliveredOrders>
       <DeliveredOrdersInfo>
