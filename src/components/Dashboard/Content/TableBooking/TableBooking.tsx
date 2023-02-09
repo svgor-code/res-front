@@ -10,19 +10,22 @@ type Props = {
 };
 
 const BlockTableBooking = styled("div")({
-  width: "25%",
+  width: "27%",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
-  margin: "17px 0px 0px 18px",
   display: "flex",
   flexDirection: "column",
   justifyContent: "flex-start",
   alignItems: "center",
-  "@media (max-width:1900px)": {
-    margin: "15px 0px 0px 14px",
-  },
+
+  "@media (max-width:1900px)": { width: "60%" },
+  "@media (max-width: 1200px)": { width: "58%" },
+  "@media (max-width: 992px)": { width: "54.6%" },
+  "@media (max-width:768px)": { width: "50.8%" },
+  "@media (max-width:576px)": { width: "97.5%" },
 });
+
 const TitleTypography = styled("div")({
   color: "#FFFFFF",
   width: "90%",

@@ -14,47 +14,60 @@ import TableDishes from "src/components/Dashboard/Content/TableDishes/TableDishe
 import IncomeCard from "src/components/Dashboard/Content/IncomeCard/IncomeCard";
 
 const ContainerDashboard = styled("div")({
-  minHeight: "calc(100vh - 64px)",
-  backgroundColor: "#030f1c",
-});
+  width: "90%",
+  display: "flex",
+  flexDirection: "column",
+  padding: "1% 0.5% 0 1%",
+  // boxSizing: "border-box",
 
-const DashboardGrid = styled("div")({
-  marginLeft: "184px",
+  "@media (max-width:1200px)": {
+    width: "100%",
+    height: "90%",
+    padding: "1% 0 0 1%",
+    marginTop: "2%",
+  },
+  "@media (max-width:768px)": { height: "92%" },
+  "@media (max-width:576px)": { height: "93%" },
 });
 
 const DashboardUpBlock = styled("div")({
+  width: "100%",
   display: "flex",
-  height: "300px",
+  flexWrap: "wrap",
+  gap: "15px",
+  marginBottom: "0.5%",
+  "@media (max-width:1900px)": {
+    paddingBottom: "1%",
+  },
 });
 
 const DashboardDownBlock = styled("div")({
+  width: "100%",
   display: "flex",
-  height: "560px",
+  flexWrap: "wrap",
+  gap: "15px",
   "@media (max-width:1900px)": {
-    height: "525px",
+    paddingBottom: "1%",
   },
 });
 
 const Dashboard = () => {
   return (
     <ContainerDashboard>
-      <DashboardGrid>
-        <DashboardUpBlock>
-          <NewOrders />
-          <ProcessOrders />
-          <DeliveredOrders />
-          <TableBooking totalBooking={12} people={27} specialRequest={2} />
-          <LiveKitchen />
-        </DashboardUpBlock>
+      <DashboardUpBlock>
+        <NewOrders />
+        <ProcessOrders />
+        <DeliveredOrders />
+        <TableBooking totalBooking={12} people={27} specialRequest={2} />
+        <LiveKitchen />
+      </DashboardUpBlock>
 
-        <DashboardDownBlock>
-          <SalesGraph />
-          <IncomeCard />
-          <TableDetails />
-          <TableRecipe />
-          <TableDishes />
-        </DashboardDownBlock>
-      </DashboardGrid>
+      <DashboardDownBlock>
+        <SalesGraph />
+        <TableDetails />
+        <TableRecipe />
+        <TableDishes />
+      </DashboardDownBlock>
     </ContainerDashboard>
   );
 };

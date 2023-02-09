@@ -31,7 +31,7 @@ export const ViewButton = styled("button")({
 export const ViewAll = styled("div")({
   display: "flex",
   justifyContent: "center",
-  marginTop: "30px",
+  marginTop: "20px",
 });
 
 export const TitleFoodMenu = styled("div")({
