@@ -10,14 +10,13 @@ import DeliveryStatus from "src/components/Orders/Content/DeliveryStatus/Deliver
 import OrderStats from "src/components/Orders/Content/OrderStats/OrderStats";
 
 const AllOrdersContainer = styled("div")({
+  width: "90%",
   minHeight: "calc(100vh - 64px)",
   backgroundColor: "#030f1c",
 });
 
 const OrdersGrid = styled("div")({
   display: "flex",
-  paddingTop: "12px",
-  marginLeft: "184px",
 });
 
 const OrdersFirstColumn = styled("div")({
