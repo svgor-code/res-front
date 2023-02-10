@@ -5,12 +5,13 @@ import AbsentStaff from "src/components/Staff/Content/AbsentStaff/AbsentStaff";
 import { ViewAll, ViewButton } from "src/components/UI/commonStyles";
 
 const ContainerStaff = styled("div")({
+  width: "90%",
   minHeight: "calc(100vh - 64px)",
   backgroundColor: "#030f1c",
 });
 
 const StaffBody = styled("div")({
-  marginLeft: "220px",
+  marginLeft: "27px",
   paddingTop: "27px",
 });
 

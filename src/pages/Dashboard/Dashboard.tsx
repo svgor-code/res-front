@@ -11,14 +11,11 @@ import TableDetails from "src/components/Dashboard/Content/TableDetails/TableDet
 import TableRecipe from "src/components/Dashboard/Content/TableRecipe/TableRecipe";
 import TableDishes from "src/components/Dashboard/Content/TableDishes/TableDishes";
 
-import IncomeCard from "src/components/Dashboard/Content/IncomeCard/IncomeCard";
-
 const ContainerDashboard = styled("div")({
   width: "90%",
   display: "flex",
   flexDirection: "column",
   padding: "1% 0.5% 0 1%",
-  // boxSizing: "border-box",
 
   "@media (max-width:1200px)": {
     width: "100%",

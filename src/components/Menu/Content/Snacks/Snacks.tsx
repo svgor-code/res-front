@@ -132,7 +132,7 @@ type SnaksType = {
   image: any;
 };
 
-const Snaks = () => {
+const Snacks = () => {
   const dataSnaks: SnaksType[] = [
     {
       name: "Full English breakfast",
@@ -183,24 +183,24 @@ const Snaks = () => {
         <TextFoodMenu>Snaks</TextFoodMenu>
       </TitleFoodMenu>
       <BlocksSnaks>
-        {dataSnaks.map((snaks, index) => (
+        {dataSnaks.map((snacks, index) => (
           <ItemSnaksBlock key={index}>
             <SnaksEditButton>
               <EditText>Edit</EditText>
             </SnaksEditButton>
             <InfoSnaks>
-              <NameSnaksSpan>{snaks.name}</NameSnaksSpan>
-              <SnaksPhoto src={snaks.image} />
+              <NameSnaksSpan>{snacks.name}</NameSnaksSpan>
+              <SnaksPhoto src={snacks.image} />
             </InfoSnaks>
-            <InfoCountrySnaks>{snaks.country}</InfoCountrySnaks>
+            <InfoCountrySnaks>{snacks.country}</InfoCountrySnaks>
             <AnotherInfoSnaks>
               <SnaksPortion>
                 Portion:
-                <PortionNumberSnaks>{snaks.portion}</PortionNumberSnaks>
+                <PortionNumberSnaks>{snacks.portion}</PortionNumberSnaks>
               </SnaksPortion>
               <SnaksPrice>
                 Price:
-                <SnaksPriceText>${snaks.price}</SnaksPriceText>
+                <SnaksPriceText>${snacks.price}</SnaksPriceText>
               </SnaksPrice>
             </AnotherInfoSnaks>
           </ItemSnaksBlock>
@@ -210,4 +210,4 @@ const Snaks = () => {
   );
 };
 
-export default Snaks;
+export default Snacks;
