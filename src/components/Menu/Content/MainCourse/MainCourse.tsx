@@ -89,8 +89,8 @@ const ItemCourseTotal = styled("span")({
   fontSize: "25px",
   lineHeight: "29px",
   background: "linear-gradient(152.1deg, #3353FA 0%, #FA33CE 109.04%)",
-  "-webkit-background-clip": "text",
-  "-webkit-text-fill-color": "transparent",
+  WebkitBackgroundClip: "text",
+  WebkitTextFillColor: "transparent",
 });
 
 const ItemCourseDollar = styled("span")({
@@ -100,8 +100,8 @@ const ItemCourseDollar = styled("span")({
   fontSize: "14px",
   lineHeight: "16px",
   background: "#234989",
-  "-webkit-text-fill-color": "transparent",
-  "-webkit-background-clip": "text",
+  WebkitTextFillColor: "transparent",
+  WebkitBackgroundClip: "text",
 });
 
 type CoursesType = {

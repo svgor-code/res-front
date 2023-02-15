@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "@mui/system";
 
 const DeliveryStatusBlock = styled("div")({
-  height: "88px",
+  height: "50%",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",

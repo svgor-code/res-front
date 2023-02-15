@@ -2,7 +2,7 @@ import React from "react";
 import { styled } from "@mui/system";
 
 const NewActiveBlock = styled("div")({
-  height: "88px",
+  height: "10%",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",

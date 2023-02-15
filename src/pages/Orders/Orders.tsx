@@ -11,7 +11,6 @@ import OrderStats from "src/components/Orders/Content/OrderStats/OrderStats";
 
 const AllOrdersContainer = styled("div")({
   width: "90%",
-  minHeight: "calc(100vh - 64px)",
   backgroundColor: "#030f1c",
 });
 
@@ -21,18 +20,13 @@ const OrdersGrid = styled("div")({
 
 const OrdersFirstColumn = styled("div")({
   width: "26.5%",
+  height: "100%",
   marginRight: "13px",
-  "@media (max-width:1900px)": {
-    marginRight: "10px",
-  },
 });
 
 const OrdersSecondColumn = styled("div")({
   width: "26.5%",
   marginRight: "13px",
-  "@media (max-width:1900px)": {
-    marginRight: "10px",
-  },
 });
 
 const OrdersThreeColumn = styled("div")({
