@@ -11,40 +11,29 @@ import OrderStats from "src/components/Orders/Content/OrderStats/OrderStats";
 
 const AllOrdersContainer = styled("div")({
   width: "90%",
+  padding: "1% 0.5% 0 1%",
   backgroundColor: "#030f1c",
 });
 
 const OrdersGrid = styled("div")({
   display: "flex",
+  gap: "13px",
 });
 
 const OrdersFirstColumn = styled("div")({
   width: "26.5%",
-  height: "100%",
-  marginRight: "13px",
 });
 
 const OrdersSecondColumn = styled("div")({
   width: "26.5%",
-  marginRight: "13px",
 });
 
 const OrdersThreeColumn = styled("div")({
   width: "26.5%",
-  marginRight: "13px",
-  "@media (max-width:1900px)": {
-    marginRight: "10px",
-  },
 });
 
 const OrdersFourColumn = styled("div")({
   width: "26.5%",
-  display: "grid",
-  alignContent: "space-between",
-  marginRight: "13px",
-  "@media (max-width:1900px)": {
-    marginRight: "10px",
-  },
 });
 
 const Orders = () => {
