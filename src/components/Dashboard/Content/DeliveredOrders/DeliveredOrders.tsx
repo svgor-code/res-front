@@ -4,17 +4,20 @@ import { ViewAll, ViewButton } from "src/components/UI/commonStyles";
 
 const BlockDeliveredOrders = styled("div")({
   width: "15%",
-  height: "285px",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
-  margin: "17px 0px 0px 18px",
-  "@media (max-width:1900px)": {
-    margin: "15px 0px 0px 14px",
-  },
+  paddingBottom: "2%",
+
+  "@media (max-width:1900px)": { width: "32.1%" },
+  "@media (max-width: 1200px)": { width: "31.6%" },
+  "@media (max-width: 992px)": { width: "31.3%" },
+  "@media (max-width:768px)": { width: "31%" },
+  "@media (max-width:576px)": { width: "97.5%" },
 });
 
 const DeliveredOrdersInfo = styled("div")({
+  textAlign: "center",
   margin: "0 auto",
   marginTop: "24px",
   width: "25%",
