@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 
 import { styled } from "@mui/system";
 
 import addIcon from "src/images/svg/addIcon.svg";
 import phoneIcon from "src/images/svg/phoneIcon.svg";
+import ModalAddNewDish from "./ModalAddNewDish/ModalAddNewDish";
 
 const BlockControlsBody = styled("div")({
   marginTop: "133px",
@@ -81,9 +82,20 @@ const CallKitchenTitle = styled("div")({
 });
 
 const Controls = () => {
+  const [open, setOpen] = useState(false);
+
+  const handleClickOpen = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
+
   return (
     <BlockControlsBody>
       <BlockControlsAdd>
+        <ModalAddNewDish onClose={onClose} open={open} />
         <ControlsAddFromList>
           <ControlsAddFromButton>
             <ControlsAddFromButtonIcon src={addIcon} />
@@ -93,7 +105,7 @@ const Controls = () => {
       </BlockControlsAdd>
       <BlockControlsAdd>
         <ControlsAddFromList>
-          <ControlsAddFromButton>
+          <ControlsAddFromButton onClick={handleClickOpen}>
             <ControlsAddFromButtonIcon src={addIcon} />
           </ControlsAddFromButton>
           <ControlsTitle>Add New Dish</ControlsTitle>
