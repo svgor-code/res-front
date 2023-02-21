@@ -1,14 +1,17 @@
 import React from "react";
 import { styled } from "@mui/system";
-import Counter from "src/components/UI/Counter";
+import Counter from "src/components/Orders/Counter";
 
 const NewActiveBlock = styled("div")({
+  height: "8vh",
   display: "flex",
   justifyContent: "space-between",
   borderRadius: "6px",
   border: "0.5px solid #153453",
   background: "#081A2C",
-  padding: "20px",
+  marginBottom: "1.5vh",
+  padding: "2% 4% 2% 6%",
+  boxSizing: "border-box",
 });
 
 const NewActiveTitle = styled("h2")({

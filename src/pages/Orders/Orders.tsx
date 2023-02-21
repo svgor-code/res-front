@@ -11,6 +11,7 @@ import OrderStats from "src/components/Orders/Content/OrderStats/OrderStats";
 
 const AllOrdersContainer = styled("div")({
   width: "90%",
+  height: "91vh",
   padding: "1% 0.5% 0 1%",
   backgroundColor: "#030f1c",
 });
