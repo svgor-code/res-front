@@ -1,15 +1,19 @@
 import React from "react";
 import { styled } from "@mui/system";
 
-const CounterBlock = styled("div")({
-  width: "13%",
+type Props = {
+  number: number;
+  width: number;
+};
+const CounterBlock = styled("div")<Props>(({ width }) => ({
+  width: `${width}%`,
   display: "flex",
   alignItems: "center",
   justifyContent: "center",
   background: "#122642c2",
   borderRadius: "10px",
   padding: "3%",
-});
+}));
 
 const CounterTotal = styled("span")({
   fontStyle: "normal",
@@ -21,13 +25,9 @@ const CounterTotal = styled("span")({
   WebkitTextFillColor: "transparent",
 });
 
-type Props = {
-  number: number;
-};
-
 const Counter = ({ number }: Props) => {
   return (
-    <CounterBlock>
+    <CounterBlock number={0} width={0}>
       <CounterTotal>{number}</CounterTotal>
     </CounterBlock>
   );

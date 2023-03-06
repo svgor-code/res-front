@@ -24,7 +24,7 @@ const NewActive = () => {
   return (
     <NewActiveBlock>
       <NewActiveTitle>New Active Orders</NewActiveTitle>
-      <Counter number={29} />
+      <Counter number={29} width={13} />
     </NewActiveBlock>
   );
 };
