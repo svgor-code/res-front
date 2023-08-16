@@ -1,1 +1,1 @@
-# platform-front
+# res-front
